@@ -1,0 +1,70 @@
+
+    <div id="top"> </div>
+    <div class="container my-4 px-2">
+        <div id="page-header">
+            <div class="row">
+                <div class="col-6 text-start">
+                    <a id="college-link" href="#" target="_blank">
+                        <img id="college-logo" class="logo" src="" alt="College Logo" />
+                    </a> <!-- #college-link -->
+                </div> <!-- .col-6 -->
+                <div class="col-6 text-end">
+                    <a id="course-home" href="#" target="parent">
+                        <figure><img id="cover-image" src="" alt="cover page image" class="course-home" />
+                        </figure>
+                    </a> <!-- #course-home -->
+                </div> <!-- .row -->
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline">
+                        <div class="line"></div>
+                        <div id="start-marker" class="marker"></div>
+                        <div id="end-marker" class="marker"></div>
+                        <div id="current-marker" class="marker current-marker"></div>
+
+                        <div id="start-label" class="label"></div>
+                        <div id="end-label" class="label"></div>
+                        <div id="current-label" class="label current"></div>
+                    </div> <!-- #timeline -->
+                </div> <!-- .col-12 -->
+            </div> <!-- .row -->
+        </div> <!-- #page-header -->
+        <div class="card">
+            <div class="card-header">SQL Database Demo</div>
+            <div class="card-body">
+    <h3 class="alert alert-info">Connect</h3>
+    <p>connect to database server</p>
+
+    <h3 class="alert alert-info">Configure</h3>
+    <p>create tables</p>
+    <pre>
+DROP TABLE IF EXISTS dbo.colors;
+
+CREATE TABLE dbo.colors (
+    id INT,
+    color VARCHAR(64)
+);
+    </pre>
+
+    <h3 class="alert alert-info">CREATE</h3>
+    <p>add data to tables</p>
+    <pre>
+INSERT INTO colors(id, color) VALUES 
+        ( 1, 'red' ),
+        ( 2, 'orange'),
+        ( 3, 'yellow'),
+        ( 4, 'green'),
+        ( 5, 'blue');
+    </pre>
+
+    <h3 class="alert alert-info">RETRIEVE</h3>
+    <p>retrieve data</p>
+    <pre>
+USE dbo.mytestdb;
+SELECT * FROM colors;
+    </pre>
+
+            </div> <!-- .card-body -->
+        </div> <!-- card -->
+    </div>

@@ -1,0 +1,32 @@
+{ 
+  "canvas": {
+    "server": "https://sdccd.instructure.com",
+    "coursePath": "/courses/2506179"
+  },
+  "sectionNumber": "42460",
+  "courseId": "CISC-401 (42460)",
+  "term": "Fall 2026",
+    "dates": {
+    "start": "2026-08-24",
+    "end": "2026-12-21",
+    "withdraw": "",
+    "classesEnd": "",
+    "finals": "",
+    "finalsEnd": "",
+    "gradesDue": "",
+    "gradesPosted": "",
+    "holidays": {
+        "Labor Day": "2026-09-07",
+        "Veterans Day": "2026-11-11",
+        "Thanksgiving": {
+            "start": "2026-11-23",
+            "end": "2026-11-29"
+        }
+    }
+  },
+  "schedule": {
+    "day": "Wednesday",
+    "time": "5:00 PM - 8:00 PM",
+    "location": "S-304"
+  }
+}

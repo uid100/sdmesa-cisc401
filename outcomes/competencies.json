@@ -1,0 +1,5 @@
+[
+   { "competency": "5.1 Data Collection and Databases", "Performance Indicator": "Design and construct databases to collect, store, and retrieve data effectively." },
+   { "competency": "5.2 Database Architecture and Design", "Performance Indicator": "Analyze and develop database structures that ensure efficient organization and integrity of data." },
+   { "competency": "5.3 Descriptive, Diagnostic and Predictive Analytics", "Performance Indicator": "Apply analytical techniques to interpret data and generate descriptive, diagnostic, and predictive insights." }
+]

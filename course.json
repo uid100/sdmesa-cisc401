@@ -1,0 +1,131 @@
+{
+  "college": "sdmesa",
+  "instructor": "dan-sullivan",
+  "courseNumber": "CISC 401",
+  "courseTitle": "Database Management and Design for Healthcare Professionals",
+  "units": 4,
+  "coverImage": "/images/server_room.jpg",
+  "description": [
+      "(from the catalog:)\nThis course discusses advanced topics in database management and design. The concepts covered in this course include programming language, current database structures utilized in healthcare, effective communication with end users and key stakeholders, identifying goals and requirements in database projects, performing end user analysis, and creating data models for performance improvement. Students explore all aspects of the data lifecycle from capture to storage and utilization to destruction.",
+      "<em>This course is designed for health information management majors.</em>"
+  ],
+  "prerequisites": "Must be admitted to the Health Information Management program.\n Computer and Information Sciences 181 with a grade of “C” or better, or equivalent.",
+  "defaultSection": "fa2026",
+  "contact": {
+    "instructorEmail": "dsullivan@sdccd.edu",
+    "officeHours": {
+      "location": "Remote",
+      "schedule": "Wed & Fri 11:00A - 1:00P PST",
+      "label": "Wed & Fri 11A - 1P",
+      "zoomLink": "https://sdccd-edu.zoom.us/j/84311346086?pwd=eU51WG5KN2lBbWg5U3VVRThTTGc2QT09"
+    },
+    "discordLink": {
+      "label": "Discord: Code Bytes",
+      "url": "https://discord.gg/MpHjV4qgxZ"
+    },
+    "about": "preferred method of contact is via email. I will respond to emails within 24 hours on weekdays. Published office hours are times when I will be available on Zoom for real-time communication. If you need to meet at a different time, please email me to schedule an appointment.\nDiscord channels are also available for anytime communication with me and your classmates."
+  },
+  "outcomes": "outcomes/clo.json",
+  "objectives": "outcomes/slo.json",
+  "textbook": "materials/textbook.json",
+  "content": {
+    "modules": {
+      "01": {
+        "title": "Module 1 - Introduction to Databases",
+        "pages": {
+          "implementation-note": {
+            "1": "use *resource* for absolute (external) links",
+            "2": "use *source* for course-repo relative (internal) links, courseBase + source"
+          },
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/01/overview01.html"},
+          "end": { "title": "End of Module 1: Sequential Processing", "type": "content", "source": "/content/end-module.html"}
+        }
+      },
+      "02": {
+        "title": "Module 2 - SQL Basics - SELECT",
+        "pages": {
+        }
+      },
+      "03": {
+        "title": "Module 3 - Database Architecture",
+        "pages": {
+          }
+      },
+      "04": {
+        "title": "Module 4 - Data Models and Modeling",
+        "pages": {
+        }
+      },
+      "05": {
+        "title": "Module 5 - Database Design",
+        "pages": {
+        }
+      },
+      "06": {
+        "title": "Module 6 - Advanced SQL Topics",
+        "pages": {
+        }
+      },
+      "07": {
+        "title": "Module 7 - Data Integration and Standards",
+        "pages": {
+        }
+      },
+      "08": {
+        "title": "Module 8 - Data Security and Privacy",
+        "pages": {
+        }
+      },
+      "09": {
+        "title": "Module 9 - Practical SQL for Healthcare",
+        "pages": {
+        }
+      },
+      "10": {
+        "title": "Module 10 - Working with NoSQL Databases",
+        "pages": {
+        }
+      },
+      "11": {
+        "title": "Module 11 - Data Analytics and Visualization",
+        "pages": {
+        }
+      },
+      "12": {
+        "title": "Module 12 - Database Application Development",
+        "pages": {
+        }
+      },
+      "13": {
+        "title": "Module 13 - Big Data in Healthcare",
+        "pages": {
+        }
+      },
+      "14": {
+        "title": "Module 14 - Case Studies and Real-World Applications",
+        "pages": {
+        }
+      },
+      "15": {
+        "title": "Module 15 - Course Wrap-Up",
+        "pages": {
+        }
+      },
+      "99": {
+        "title": "99. Student Resources",
+        "pages": {
+        }
+      }
+    }
+  },
+  "templates": {
+    "policies": "policies/policies.html"
+  },
+  "materials": {
+    "required": "materials/required.html",
+    "recommended": "materials/recommended.html"
+  },
+  "gradingDetails": "grading/grading-details.html",
+  "accommodations": "accommodations/accommodations.html",
+  "topicOutline": "outline/outline.html"
+}

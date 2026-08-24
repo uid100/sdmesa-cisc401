@@ -1,0 +1,6 @@
+[
+  { "id": "CLO  #1", "outcome": "Conduct requirement analysis of healthcare information systems."},
+  { "id": "CLO  #2", "outcome": "75% of students are able to conduct requirement analysis of healthcare information systems."},
+  { "id": "CLO  #3", "outcome": "Use SQL to create databases, create tables, insert data into tables, and select data from tables for sample healthcare databases." },
+  { "id": "CLO  #4", "outcome": "Use Python to provide a looping structure as a solution to a software problem"}
+]

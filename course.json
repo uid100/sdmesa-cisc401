@@ -37,8 +37,13 @@
             "1": "use *resource* for absolute (external) links",
             "2": "use *source* for course-repo relative (internal) links, courseBase + source"
           },
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/01/overview01.html"},
-          "end": { "title": "End of Module 1: Sequential Processing", "type": "content", "source": "/content/end-module.html"}
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/01/overview.html"},
+          "chapter-notes": { "title": "Chapter Notes", "type": "content", "source": "/content/01/chapter-notes.html"},
+          "demo": { "title": "Demo: SQL SELECT", "type": "content", "source": "/content/01/demo.html"},
+          "intro-to-databases": { "title": "Introduction to Databases", "type": "content", "source": "/content/01/intro-to-databases.html"},
+          "client-server": { "title": "Client-Server Architecture", "type": "content", "source": "/content/01/client-server.html"},
+          "disc-introductions": { "title": "Discussion: Introductions", "type": "content", "source": "/content/01/disc-introductions.html"},
+          "end": { "title": "End of Module 1: Introduction to Databases", "type": "content", "source": "/content/end-module.html"}
         }
       },
       "02": {

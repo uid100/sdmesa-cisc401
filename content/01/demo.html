@@ -6,6 +6,22 @@
             <div class="card-body">
     <h3 class="alert alert-info">Connect</h3>
     <p>connect to database server</p>
+    <code><pre>
+    SQL Server Connection Settings
+
+Server Name: localhost\SQLEXPRESS
+Authentication: Windows Authentication
+Database: master
+Encrypt: Optional
+Trust Server Certificate: True
+    </pre></code>
+
+    <p>verify</p>
+    <code><pre>
+    SELECT @@SERVERNAME AS ServerName,
+SERVERPROPERTY('InstanceName') AS InstanceName,
+@@VERSION AS VersionInfo;
+    </pre></code>
 
     <h3 class="alert alert-info">Configure</h3>
     <p>create tables</p>

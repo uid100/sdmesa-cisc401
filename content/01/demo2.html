@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">SQL Database Demo</div>
+    <div class="card-body">
+        <h3 class="alert alert-info">Connect</h3>
+        <p>connect to database server</p>
+<pre>Server=192.168.0.236;Database=PatientRecordsDB;User Id=cisc401;Password=cisc401password;</pre>
+
+<h3>Step 1: Install the SQL Server Extension</h3>
+<ol>
+    <li>Open Visual Studio Code.</li>
+    <li>Click the Extensions icon on the left sidebar.</li>
+    <li>Search for SQL Server (mssql).</li>
+    <li>Click Install.</li>
+</ol>
+<h3>Step 2: Connect to the Database</h3>
+<ol>
+    <li>Press Ctrl+Shift+P to open the Command Palette.</li>
+    <li>Type MS SQL: Connect and select it.</li>
+    <li>Choose Create Connection Profile.</li>  
+    <li>Enter the following information:
+<ul>
+    <li>Server name: 192.168.0.236</li>
+    <li>Authentication Type: SQL Login</li>
+    <li>User name: cisc401</li>
+    <li>Password: cisc401password</li>
+    <li>Database name: PatientRecordsDB</li>
+</ul>
+</li>
+    <li>Save the profile when prompted.</li>
+    <li>A confirmation message should appear indicating a successful connection.</li>
+</ol>
+<h3>Step 3: Open a Query Window</h3>
+<ol>
+    <li>Press Ctrl+Shift+P.</li>
+    <li>Select MS SQL: New Query.</li>
+    <li>Verify that the status bar shows you are connected to PatientRecordsDB.</li>
+</ol>
+<h3>Step 4: List All Tables</h3>
+<p>Run the following query:</p>
+<pre>
+SELECT TABLE_SCHEMA, TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_TYPE = 'BASE TABLE'
+ORDER BY TABLE_SCHEMA, TABLE_NAME;
+</pre>
+</div>

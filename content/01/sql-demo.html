@@ -1,0 +1,137 @@
+<div class="card">
+    <div class="card-header">SQL Database Demo</div>
+    <div class="card-body">
+        <h2>SQL Server Database Demo Using Visual Studio Code</h2>
+
+<p>
+In this exercise, you will connect to a local SQL Server instance using Visual Studio Code,
+create a database, create a table, insert data, and retrieve data using SQL queries.
+</p>
+
+<h3>Step 1: Install the SQL Server Extension</h3>
+
+<ol>
+    <li>Open <strong>Visual Studio Code</strong>.</li>
+    <li>Click the <strong>Extensions</strong> icon on the left toolbar.</li>
+    <li>Search for <strong>SQL Server (mssql)</strong>.</li>
+    <li>Install the extension published by Microsoft.</li>
+</ol>
+
+<h3>Step 2: Create a Connection to SQL Server</h3>
+
+<ol>
+    <li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows) or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (macOS).</li>
+    <li>Type <strong>MS SQL: Connect</strong> and select it.</li>
+    <li>Choose <strong>Create Connection Profile</strong>.</li>
+    <li>Enter the following values:
+        <ul>
+            <li><strong>Server:</strong> 127.0.0.1</li>
+            <li><strong>Authentication Type:</strong> SQL Login (or use your instructor's preferred authentication method)</li>
+            <li><strong>Database:</strong> Leave blank for now</li>
+        </ul>
+    </li>
+    <li>Save the connection profile.</li>
+</ol>
+
+<div class="alert alert-info">
+    <strong>Note:</strong> Your instructor may provide different login credentials depending on your installation.
+</div>
+
+<h3>Step 3: Open a New Query Window</h3>
+
+<ol>
+    <li>Open the Command Palette again.</li>
+    <li>Select <strong>MS SQL: New Query</strong>.</li>
+    <li>A new SQL editor window will open.</li>
+</ol>
+
+<h3>Step 4: Create a New Database</h3>
+
+<p>
+For this demo, we will create a database named <strong>MyTestDB</strong>.
+</p>
+
+<pre><code class="language-sql">
+CREATE DATABASE MyTestDB;
+GO
+</code></pre>
+
+<p>Run the query using the <strong>Run Query</strong> button or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>.</p>
+
+<h3>Step 5: Switch to the New Database</h3>
+
+<pre><code class="language-sql">
+USE MyTestDB;
+GO
+</code></pre>
+
+<h3>Step 6: Create a Table</h3>
+
+<p>
+Create a simple table named <strong>colors</strong>.
+</p>
+
+<pre><code class="language-sql">
+DROP TABLE IF EXISTS dbo.colors;
+
+CREATE TABLE dbo.colors (
+    id INT,
+    color VARCHAR(64)
+);
+GO
+</code></pre>
+
+<h3>Step 7: Insert Data into the Table</h3>
+
+<pre><code class="language-sql">
+INSERT INTO colors(id, color) VALUES
+    (1, 'red'),
+    (2, 'orange'),
+    (3, 'yellow'),
+    (4, 'green'),
+    (5, 'blue');
+GO
+</code></pre>
+
+<h3>Step 8: Retrieve the Data</h3>
+
+<p>
+Run a query to display all rows in the table.
+</p>
+
+<pre><code class="language-sql">
+USE MyTestDB;
+
+SELECT *
+FROM colors;
+GO
+</code></pre>
+
+<h3>Expected Results</h3>
+
+<p>
+The query should return five rows:
+</p>
+
+<pre><code>
+id   color
+--------------
+1    red
+2    orange
+3    yellow
+4    green
+5    blue
+</code></pre>
+
+<h3>What You Learned</h3>
+
+<ul>
+    <li>How to install the SQL Server extension for VS Code.</li>
+    <li>How to connect to a SQL Server instance.</li>
+    <li>How to create a database.</li>
+    <li>How to create a table.</li>
+    <li>How to insert records.</li>
+    <li>How to retrieve records with a SELECT statement.</li>
+</ul>
+</div> <!-- card-body -->
+</div> <!-- card -->

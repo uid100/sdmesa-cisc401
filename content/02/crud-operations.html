@@ -4,57 +4,73 @@
     <div class="card" id="crud">
         <div class="card-header">Structured Query Language (SQL)</div>
         <div class="card-body">
-            <h3>SQL Basics</h3>
-<h1>Introduction to Structured Query Language (SQL)</h1>
+            <h2>SQL Basics</h2>
 
-<p><strong>Structured Query Language (SQL)</strong> is a standardized programming language used to manage and
-    manipulate relational databases. SQL was developed in the 1970s by IBM researchers Raymond Boyce and Donald
-    Chamberlin. It was originally called SEQUEL (Structured English Query Language) and was designed to retrieve and
-    manipulate data stored in IBM's early relational database systems. SQL has since become the standard language
-    for interacting with relational databases, and it is widely used in various industries for managing large
-    volumes of data.</p>
+            <h3>Introduction to Structured Query Language (SQL)</h3>
+            <p>
+                <strong>Structured Query Language (SQL)</strong> 
+                is a standardized programming language used to manage and manipulate relational 
+                databases. SQL was developed in the 1970s by IBM researchers Raymond Boyce and 
+                Donald Chamberlin. It was originally called SEQUEL (Structured English Query 
+                Language) and was designed to retrieve and manipulate data stored in IBM's early 
+                relational database systems. SQL has since become the standard language for 
+                interacting with relational databases, and it is widely used in various industries 
+                for managing large volumes of data.
+            </p>
 
-<h2>Why SQL is Used</h2>
+            <h3>Why SQL is Used</h3>
+            <p>
+                SQL is essential for interacting with relational databases, which organize data 
+                into tables. It allows users to perform various operations such as querying data, 
+                updating records, and defining database structures. The simplicity and efficiency 
+                of SQL make it the go-to language for database management. SQL is also highly 
+                portable, meaning that queries written in SQL can be used across different 
+                database systems with minimal modification.
+            </p>
 
-<p>SQL is essential for interacting with relational databases, which organize data into tables. It allows users to
-    perform various operations such as querying data, updating records, and defining database structures. The
-    simplicity and efficiency of SQL make it the go-to language for database management. SQL is also highly
-    portable, meaning that queries written in SQL can be used across different database systems with minimal
-    modification.</p>
+            <h3>Sub-Languages of SQL</h3>
+            <p>
+                SQL is composed of several sub-languages, each with a specific purpose:
+                <ul>
+                    <li>
+                        <strong>Data Definition Language (DDL):</strong> 
+                        This sub-language is used to define and modify the structure of database 
+                        objects, such as tables and indexes. Common DDL commands include 
+                        <code>CREATE</code>, <code>ALTER</code>, and <code>DROP</code>.
+                    </li>
+                    <li>
+                        <strong>Data Manipulation Language (DML):</strong>
+                        This sub-language is used to retrieve and manipulate data within the 
+                        database. It includes commands like 
+                        <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>. 
+                        These commands correspond to the CRUD (Create, Read, Update, Delete) 
+                        operations in database management.
+                    </li>
+                    <li>
+                        <strong>Data Control Language (DCL):</strong> 
+                        This sub-language is used to control access to data within the database. 
+                        It includes commands like 
+                        <code>GRANT</code> and <code>REVOKE</code> 
+                        that manage user permissions.
+                    </li>
+                </ul>
+            </p>
 
-<h2>Sub-Languages of SQL</h2>
+            <h3>Core DML Operations (CRUD)</h3>
+            <p>
+                The core DML operations that correspond to CRUD are:
+                <ul>
+                    <li><strong>Create:</strong > <code>INSERT</code>- Adds new records to a table.</li >
+                    <li><strong>Read:</strong > <code>SELECT</code>- Retrieves data from a table.</li >
+                    <li><strong>Update:</strong > <code>UPDATE</code>- Modifies existing records in a table.</li >
+                    <li><strong>Delete:</strong > <code>DELETE</code>- Removes records from a table.</li >
+                </ul>
+            </p>
 
-<p>SQL is composed of several sub-languages, each with a specific purpose:</p>
-
-<ul>
-    <li><strong>Data Definition Language (DDL):</strong> This sub-language is used to define and modify the
-        structure of database objects, such as tables and indexes. Common DDL commands include <code>CREATE</code>,
-        <code>ALTER</code>, and <code>DROP</code>.
-    </li>
-    <li><strong>Data Manipulation Language (DML):</strong> This sub-language is used to retrieve and manipulate data
-        within the database. It includes commands like <code>SELECT</code>, <code>INSERT</code>,
-        <code>UPDATE</code>, and <code>DELETE</code>. These commands correspond to the CRUD (Create, Read, Update,
-        Delete) operations in database management.
-    </li>
-    <li><strong>Data Control Language (DCL):</strong> This sub-language is used to control access to data within the
-        database. It includes commands like <code>GRANT</code> and <code>REVOKE</code> that manage user permissions.
-    </li>
-</ul>
-
-<h3>Core DML Operations (CRUD)</h3>
-
-<p>The core DML operations that correspond to CRUD are:</p>
-
-<ul>
-    <li><strong>Create:</strong> <code>INSERT</code> - Adds new records to a table.</li>
-    <li><strong>Read:</strong> <code>SELECT</code> - Retrieves data from a table.</li>
-    <li><strong>Update:</strong> <code>UPDATE</code> - Modifies existing records in a table.</li>
-    <li><strong>Delete:</strong> <code>DELETE</code> - Removes records from a table.</li>
-</ul>
-
-<h2>Example: CRUD Operations in SQL</h2>
-
-<p>Below is a simple example demonstrating the basic CRUD operations in SQL:</p>
+            <h3>Example: CRUD Operations in SQL</h3>
+            <p>
+                Below is a simple example demonstrating the basic CRUD operations in SQL:</p>
+            </p>
 
 <pre><code>-- Create a new table called 'Employees'
 CREATE TABLE Employees (
@@ -81,10 +97,12 @@ DELETE FROM Employees
 WHERE EmployeeID = 1;
 </code></pre>
 
-<p>This example demonstrates the basic SQL commands used to create a table, insert data into it, retrieve data,
-    update existing records, and delete records from the table. These operations form the foundation of database
-    management using SQL.</p>
-
+            <p>
+                This example demonstrates the basic SQL commands used to create 
+                a table, insert data into it, retrieve data, update existing 
+                records, and delete records from the table. These operations 
+                form the foundation of database management using SQL.
+            </p>  
         </div> <!-- .card-body -->
-    </div> <!-- #crud -->
-</div>
+    </div> <!-- .card -->
+</div> <!-- .container -->

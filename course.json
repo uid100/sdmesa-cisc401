@@ -125,8 +125,8 @@
       "99": {
         "title": "99. Student Resources",
         "pages": {
-          "sql-windows": {  "title": "Module Overview", "type": "content", "source": "/content/99/getting-started.html"},
-          "sql-express": {  "title": "Module Overview", "type": "content", "source": "/content/99/getting-started-win.html" },
+          "sql-start": {  "title": "Module Overview", "type": "content", "source": "/content/99/getting-started.html"},
+          "sql-windows": {  "title": "Module Overview", "type": "content", "source": "/content/99/getting-started-win.html" },
           "sql-macos": {  "title": "Module Overview", "type": "content", "source": "/content/99/getting-started-macos.html"}
         }
       }

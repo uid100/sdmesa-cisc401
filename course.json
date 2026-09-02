@@ -52,6 +52,7 @@
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/02/overview.html"},
           "crud": { "title": "CRUD Operations", "type": "content", "source": "/content/02/crud-operations.html" },
           "dialects": { "title": "SQL Dialects", "type": "content", "source": "/content/02/sql-dialects.html" },
+          "select": { "title": "SQL SELECT Statement", "type": "content", "source": "/content/02/select.html" },
           "ex1-queries": { "title": "Exercise 1: SQL Queries", "type": "content", "source": "/content/02/ex1-single-table-queries.html" },
           "end": { "title": "End of Module 2: SQL Basics - SELECT", "type": "content", "source": "/content/end-module.html" }
         }

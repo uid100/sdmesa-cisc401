@@ -1,0 +1,188 @@
+<div class="alert alert-info mb-4">
+    <h4 class="alert-heading">SQL Express Fundamentals Lab</h4>
+
+    <p>
+        These instructions are intended for the student classroom computers, which
+        have <strong>SQL Server Express</strong> installed.
+    </p>
+
+    <p class="mb-0">
+        In this lab, you will use <strong>Visual Studio Code</strong> as a database
+        client to connect to a SQL Server Express database server, create a database,
+        create a table, and work with data using basic SQL commands.
+    </p>
+</div>
+
+<div class="boxed-paragraph" style="text-align: center; font-weight: bold; margin: 10px 10px 10px 10px;">
+    <p>Server → Client → Connection → Database → Tables → Data</p>
+</div>
+
+<div class="card mb-4 border-primary">
+    <div class="card-header bg-primary text-white">
+        <h3 class="h5 mb-0">Step 1: Verify the Database Server is Running</h3>
+    </div>
+    <div class="card-body">
+        <p>
+            Before you can work with data, the database server must be running.
+        </p>
+
+        <ol>
+            <li>Open <strong>Services</strong> in Windows.</li>
+            <li>Locate <strong>SQL Server (SQLEXPRESS)</strong>.</li>
+            <li>Verify its status is <strong>Running</strong>.</li>
+            <li>If it is stopped, start the service.</li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong> SQL Express is the database server. It stores
+            and manages the data.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 2: Launch the Database Client</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Open <strong>Visual Studio Code</strong>.</li>
+            <li>Open the <strong>Extensions</strong> panel.</li>
+            <li>Install the Microsoft <strong>SQL Server (mssql)</strong> extension if it is not already installed.</li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong> VS Code is the database client. It sends commands to the database server.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 3: Connect the Client to the Server</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Press <strong>Ctrl+Shift+P</strong>.</li>
+            <li>Select <strong>MS SQL: Connect</strong>.</li>
+            <li>Connect using:
+                <ul>
+                    <li><strong>Server:</strong> localhost\SQLEXPRESS</li>
+                    <li><strong>Authentication:</strong> Windows Authentication</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong> A connection allows your client application to communicate with the database server.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 4: Create or Connect to a Database</h3>
+    </div>
+    <div class="card-body">
+        <p>
+            A database is a container that holds tables and other database objects.
+        </p>
+
+<pre><code>CREATE DATABASE StudentDB;
+GO
+
+USE StudentDB;
+GO</code></pre>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong> A server can contain many databases.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 5: Create a Table</h3>
+    </div>
+    <div class="card-body">
+        <p>
+            Tables store data in rows and columns.
+        </p>
+
+<pre><code>CREATE TABLE Students
+(
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    Major VARCHAR(50)
+);
+GO</code></pre>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong> Tables are where most data is stored.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 6: Use CRUD Operations</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            CRUD stands for:
+        </p>
+
+        <ul>
+            <li><strong>Create</strong> - Add data</li>
+            <li><strong>Read</strong> - View data</li>
+            <li><strong>Update</strong> - Change data</li>
+            <li><strong>Delete</strong> - Remove data</li>
+        </ul>
+
+        <h6>Create (INSERT)</h6>
+
+<pre><code>INSERT INTO Students
+VALUES
+    (1, 'Emma', 'Cybersecurity'),
+    (2, 'Noah', 'Business'),
+    (3, 'Ava', 'Computer Science');
+GO</code></pre>
+
+        <h6>Read (SELECT)</h6>
+
+<pre><code>SELECT *
+FROM Students;
+GO</code></pre>
+
+        <h6>Update (UPDATE)</h6>
+
+<pre><code>UPDATE Students
+SET Major = 'Information Systems'
+WHERE StudentID = 2;
+GO</code></pre>
+
+        <h6>Delete (DELETE)</h6>
+
+<pre><code>DELETE FROM Students
+WHERE StudentID = 3;
+GO</code></pre>
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Learning Objectives</h3>
+    </div>
+    <div class="card-body">
+        <ul class="mb-0">
+            <li>Understand the difference between a database server and a client.</li>
+            <li>Connect VS Code to SQL Server Express.</li>
+            <li>Create and use a database.</li>
+            <li>Create a table.</li>
+            <li>Perform basic CRUD operations.</li>
+            <li>Verify results using SQL queries.</li>
+        </ul>
+    </div>
+</div>

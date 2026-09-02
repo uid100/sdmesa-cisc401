@@ -1,0 +1,144 @@
+<div class="alert alert-primary mb-4">
+    <h4 class="alert-heading">Windows Home Installation Guide</h4>
+
+    <p>
+        Use these instructions if you are installing SQL Server Express on your own
+        Windows computer rather than using a classroom lab computer.
+    </p>
+
+    <p class="mb-0">
+        After completing the installation and configuration steps below, return to
+        the classroom exercise instructions and complete the database activities
+        exactly as written.
+    </p>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 1: Install Visual Studio Code</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Download Visual Studio Code.</li>
+            <li>Install using the default settings.</li>
+            <li>Launch VS Code.</li>
+            <li>Install the Microsoft <strong>SQL Server (mssql)</strong> extension.</li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            VS Code will serve as your database client application.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 2: Download SQL Server Express</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Download SQL Server Express from Microsoft's website.</li>
+            <li>Run the installer.</li>
+            <li>Select <strong>Basic</strong> installation if you are new to SQL Server.</li>
+            <li>Allow the installation to complete.</li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            SQL Server Express is the database server that will store and manage your data.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 3: Verify the SQL Server Service is Running</h3>
+    </div>
+    <div class="card-body">
+
+        <ol>
+            <li>Press <strong>Windows + R</strong>.</li>
+            <li>Type <code>services.msc</code>.</li>
+            <li>Locate <strong>SQL Server (SQLEXPRESS)</strong>.</li>
+            <li>Verify the status is <strong>Running</strong>.</li>
+            <li>If necessary, start the service.</li>
+        </ol>
+
+        <div class="alert alert-warning mb-0">
+            The database server must be running before VS Code can connect to it.
+        </div>
+
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 4: Determine Your Server Name</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            A default SQL Express installation usually creates the instance:
+        </p>
+
+<pre><code>localhost\SQLEXPRESS</code></pre>
+
+        <p>
+            If you selected different installation options, your instance name may vary.
+        </p>
+
+        <p class="mb-0">
+            You will use this server name when connecting from VS Code.
+        </p>
+
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 5: Test the Connection from VS Code</h3>
+    </div>
+    <div class="card-body">
+
+        <ol>
+            <li>Open VS Code.</li>
+            <li>Press <strong>Ctrl + Shift + P</strong>.</li>
+            <li>Select <strong>MS SQL: Connect</strong>.</li>
+            <li>Use:</li>
+        </ol>
+
+<pre><code>Server: localhost\SQLEXPRESS
+Authentication: Windows Authentication</code></pre>
+
+        <p class="mb-0">
+            If the connection succeeds, your installation is complete.
+        </p>
+
+    </div>
+</div>
+
+<div class="card border-success">
+    <div class="card-header bg-success text-white">
+        <h3 class="h5 mb-0">Next Step: Use the Classroom Exercise</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            Once you have successfully connected to your local SQL Server Express
+            instance, return to the classroom exercise instructions.
+        </p>
+
+        <p>
+            Do <strong>not</strong> repeat the installation process. Continue with:
+        </p>
+
+        <ul class="mb-0">
+            <li>Verify the database server is running.</li>
+            <li>Launch the database client (VS Code).</li>
+            <li>Connect the client to the server.</li>
+            <li>Create or connect to a database.</li>
+            <li>Create or identify tables.</li>
+            <li>Perform CRUD operations using SQL.</li>
+        </ul>
+
+    </div>
+</div>

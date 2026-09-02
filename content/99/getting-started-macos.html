@@ -1,0 +1,203 @@
+<div class="alert alert-success mb-4">
+    <h4 class="alert-heading">macOS SQL Server Setup Using Docker</h4>
+
+    <p>
+        SQL Server Express is not available as a native installation on macOS.
+        Instead, Mac users will run SQL Server inside a Docker container and
+        connect to it using Visual Studio Code.
+    </p>
+
+    <p class="mb-0">
+        After completing this setup, you will be able to follow the same database
+        exercises as Windows users with only minor connection changes.
+    </p>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 1: Install Docker Desktop</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Download Docker Desktop for macOS.</li>
+            <li>Install using the default options.</li>
+            <li>Launch Docker Desktop.</li>
+            <li>Wait until Docker reports that it is running.</li>
+        </ol>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong>
+            Docker allows you to run SQL Server inside a Linux container on your Mac.
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 2: Verify Docker is Running</h3>
+    </div>
+    <div class="card-body">
+        <ol>
+            <li>Open Terminal.</li>
+            <li>Run the following command:</li>
+        </ol>
+
+<pre><code>docker --version</code></pre>
+
+        <p>
+            If Docker is installed correctly, a version number should be displayed.
+        </p>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 3: Create a SQL Server Container</h3>
+    </div>
+    <div class="card-body">
+
+        <p>Run the following command in Terminal:</p>
+
+<pre><code>docker run \
+-e "ACCEPT_EULA=Y" \
+-e "MSSQL_SA_PASSWORD=Password123!" \
+-p 1433:1433 \
+--name sqlserver \
+-d mcr.microsoft.com/mssql/server:2022-latest</code></pre>
+
+        <p>
+            This command downloads SQL Server and creates a container named
+            <code>sqlserver</code>.
+        </p>
+
+        <div class="alert alert-warning mb-0">
+            Save the SA password. You will need it later when connecting from VS Code.
+        </div>
+
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 4: Verify the Container is Running</h3>
+    </div>
+    <div class="card-body">
+
+        <p>Run:</p>
+
+<pre><code>docker ps</code></pre>
+
+        <p>
+            Verify that a container named <code>sqlserver</code> appears in the list.
+        </p>
+
+        <p>
+            The status should show that the container is running.
+        </p>
+
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 5: Install Visual Studio Code</h3>
+    </div>
+    <div class="card-body">
+
+        <ol>
+            <li>Install Visual Studio Code.</li>
+            <li>Open VS Code.</li>
+            <li>Open the Extensions panel.</li>
+            <li>Install the Microsoft <strong>SQL Server (mssql)</strong> extension.</li>
+        </ol>
+
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 6: Connect VS Code to SQL Server</h3>
+    </div>
+    <div class="card-body">
+
+        <ol>
+            <li>Press <strong>Ctrl+Shift+P</strong> (or Command+Shift+P).</li>
+            <li>Select <strong>MS SQL: Connect</strong>.</li>
+            <li>Use the following values:</li>
+        </ol>
+
+        <ul>
+            <li><strong>Server:</strong> localhost</li>
+            <li><strong>Port:</strong> 1433</li>
+            <li><strong>Authentication:</strong> SQL Login</li>
+            <li><strong>User:</strong> sa</li>
+            <li><strong>Password:</strong> Password123!</li>
+        </ul>
+
+        <div class="alert alert-secondary mb-0">
+            <strong>Key Idea:</strong>
+            VS Code is the client application. The SQL Server container is the database server.
+        </div>
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Step 7: Start Working with Databases</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            Once connected, you can create databases, tables, and run SQL statements
+            exactly as shown in the classroom exercises.
+        </p>
+
+<pre><code>CREATE DATABASE StudentDB;
+GO</code></pre>
+
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="card border-info">
+    <div class="card-header bg-info text-white">
+        <h3 class="h5 mb-0">Using the Classroom Instructions with a Docker-Based SQL Server</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            Most of the classroom instructions will work exactly as written. The main
+            difference is the connection information used in Step 3.
+        </p>
+
+        <h5>Windows Classroom Computers</h5>
+
+<pre><code>Server: localhost\SQLEXPRESS
+Authentication: Windows Authentication</code></pre>
+
+        <h5>macOS Docker Installation</h5>
+
+<pre><code>Server: localhost
+Port: 1433
+Authentication: SQL Login
+User: sa
+Password: Password123!</code></pre>
+
+        <div class="alert alert-success">
+            <strong>Good News:</strong>
+            After you connect successfully, the remaining steps are the same.
+            Database creation, table creation, CRUD operations, and SQL queries
+            are identical regardless of whether SQL Server is running locally on
+            Windows or inside a Docker container on macOS.
+        </div>
+
+        <h5>Mapping the Classroom Concepts</h5>
+
+        <ul class="mb-0">
+            <li><strong>Database Server Running</strong> → Verify the Docker container is running.</li>
+            <li><strong>Launch Client</strong> → Open VS Code.</li>
+            <li><strong>Connect Client to Server</strong> → Connect to localhost on port 1433.</li>
+            <li><strong>Create or Connect to Database</strong> → Use CREATE DATABASE and USE.</li>
+            <li><strong>Create or Identify Tables</strong> → Use CREATE TABLE and inspect existing

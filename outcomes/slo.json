@@ -1,42 +1,5 @@
 [
-      {
-        "id": "LO  #1",
-        "objective": "Format data to satisfy integration and interoperability needs."
-      },
-      {
-        "id": "LO  #2",
-        "objective": "Construct and maintain the standardization of data dictionaries to meet the needs of the enterprise."
-      },
-      {
-        "id": "LO  #3",
-        "objective": "Assess information operability and information exchange."
-      },
-      {
-        "id": "LO  #4",
-        "objective": "Analyze information needs of customers across the healthcare continuum."
-      },
-      {
-        "id": "LO  #5",
-        "objective": "Evaluate health information systems and data storage design."
-      },
-      {
-        "id": "LO  #6",
-        "objective": "Apply knowledge of database architecture and design to meet organizational needs."
-      },
-      {
-        "id": "LO  #7",
-        "objective": "Utilize technology for data collection, storage, analysis and reporting of information."
-      },
-      {
-        "id": "LO  #8",
-        "objective": "Assess systems capabilities to meet regulatory requirements."
-      },
-      {
-        "id": "LO  #9",
-        "objective": "Apply knowledge of database querying and data exploration and mining techniques to facilitate information retrieval."
-      },
-      {
-        "id": "LO  #10",
-        "objective": "Evaluate administrative reports using Structured Query Language (SQL) reporting tools."
-      }
-] 
+  { "id": "LO  #1", "outcome": "Design and construct databases to collect, store, and retrieve data effectively."},
+  { "id": "LO  #2", "outcome": "Analyze and develop database structures that ensure efficient organization and integrity of data."},
+  { "id": "LO  #3", "outcome": "Apply analytical techniques to interpret data and generate descriptive, diagnostic, and predictive insights." }
+]

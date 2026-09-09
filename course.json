@@ -61,7 +61,7 @@
         "title": "Module 3 - Database Architecture",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "content/03/overview.html"},
-          "storage": { "title": "Database Storage", "type": "content", "source": "content/03/data_storage.html" },
+          "storage": { "title": "Database Storage", "type": "content", "source": "content/03/data-storage.html" },
           "disc-entities": { "title": "Discussion: Healthcare Data Entities", "type": "content", "source": "content/03/disc-entities.html" },
           "quiz1": { "title": "Quiz 1: SQL Basics", "type": "content", "source": "content/03/quiz1.html" },
           "end": { "title": "End of Module 3: Database Architecture", "type": "content", "source": "content/03/end-module.html" }

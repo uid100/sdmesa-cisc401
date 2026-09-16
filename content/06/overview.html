@@ -1,0 +1,73 @@
+    <div id="top"> </div>
+    <div class="container my-4 px-2">
+        <div class="card" id="module-overview">
+            <h2>Module 6 Overview</h2>
+            <div class="card-header">Multi-table Database Query and Design</div>
+            <div class="card-body">
+                <h1>Using table JOINs and subqueries</h1>
+                <p>
+                    In SQL, data is often stored across multiple related tables, and querying data from these tables
+                    simultaneously is essential for complex database operations. Two common techniques to achieve this are
+                    <strong>JOIN</strong>s and <strong>subqueries</strong>.
+                </p>
+                <h2 class="alert alert-info">JOINs</h2>
+                <p>
+                    A JOIN is a SQL operation that combines rows from two or more tables based on a related column, such as
+                    a shared foreign key. There are several types of JOINs, including:
+                </p>
+                <ul>
+                    <li><strong>INNER JOIN</strong>: Returns only the rows with matching values in both tables.</li>
+                    <li><strong>LEFT JOIN (LEFT OUTER JOIN)</strong>: Returns all rows from the left table and matching rows
+                        from
+                        the right table; unmatched rows from the right are returned as NULL.</li>
+                    <li><strong>RIGHT JOIN (RIGHT OUTER JOIN)</strong>: Returns all rows from the right table and matching rows
+                        from
+                        the left; unmatched rows from the left are returned as NULL.</li>
+                    <li><strong>FULL OUTER JOIN</strong>: Returns all rows from both tables, with NULLs where there are no
+                        matches.</li>
+                    <li><strong>CROSS JOIN</strong>: Returns the Cartesian product of two tables (all possible combinations of
+                        rows).</li>
+                </ul>
+                <p>
+                    JOINs are used to retrieve data from multiple tables based on a related column between them. They are
+                    essential for querying complex relationships and fetching data that spans multiple tables.
+                </p>
+                <h2 class="alert alert-info">Subqueries</h2>
+                <p>
+                    A subquery is a query nested inside another query, often used to filter, aggregate, or calculate data.
+                </p>
+                <p>
+                    Subqueries can:
+                </p>
+                <ul>
+                    <li>Return a single value (scalar subqueries).</li>
+                    <li>Return a list of values (used with IN or EXISTS).</li>
+                    <li>Be used in the FROM clause as a derived table.</li>
+                </ul>
+                <p>
+                    Subqueries are powerful when you need to:
+                </p>
+                <ul>
+                    <li>Compare aggregated data to individual rows.</li>
+                    <li>Fetch related data indirectly or with complex conditions.</li>
+                </ul>
+                <p>
+                    Both joins and subqueries are fundamental for efficiently querying multi-table relationships, allowing you
+                    to
+                    retrieve meaningful and relevant data.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- #module-overview -->
+        <div class="card mt-4" id="todo-list">
+            <div class="card-header">To Do List</div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Read:</strong> Transact-SQL (Larsen), Ch.4&5 The Mathematics of SQL</li>
+                    <li><strong>Review:</strong> Lecture Notes and Module Content</li>
+                    <li><strong>Practice:</strong> SQL queries with JOINs and subqueries</li>
+                    <li><strong>Complete:</strong> Exercise: Table JOINs and subqueries</li>
+                    <li><strong>Complete:</strong> Quiz 2</li>
+                </ul>
+            </div> <!-- .card-body -->
+        </div> <!-- #todo-list -->
+    </div> <!-- .container -->

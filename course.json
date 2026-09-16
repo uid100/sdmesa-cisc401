@@ -70,61 +70,85 @@
       "04": {
         "title": "Module 4 - Data Models and Modeling",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/04/overview.html"},
+          "end": { "title": "End of Module 4: Data Models and Modeling", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "05": {
         "title": "Module 5 - Database Design",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/05/overview.html"},
+          "end": { "title": "End of Module 5: Database Design", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "06": {
         "title": "Module 6 - Advanced SQL Topics",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/06/overview.html"},
+          "end": { "title": "End of Module 6: Advanced SQL Topics", "type": "content", "source": "/content/end-module.html" } 
         }
       },
       "07": {
         "title": "Module 7 - Data Integration and Standards",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/07/overview.html"},
+          "end": { "title": "End of Module 7: Data Integration and Standards", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "08": {
         "title": "Module 8 - Data Security and Privacy",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/08/overview.html"},
+          "end": { "title": "End of Module 8: Data Security and Privacy", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "09": {
         "title": "Module 9 - Practical SQL for Healthcare",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/09/overview.html"},
+          "end": { "title": "End of Module 9: Practical SQL for Healthcare", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "10": {
         "title": "Module 10 - Working with NoSQL Databases",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/10/overview.html"},
+          "end": { "title": "End of Module 10: Working with NoSQL Databases", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "11": {
         "title": "Module 11 - Data Analytics and Visualization",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/11/overview.html"},
+          "end": { "title": "End of Module 11: Data Analytics and Visualization", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "12": {
         "title": "Module 12 - Database Application Development",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/12/overview.html"},
+          "end": { "title": "End of Module 12: Database Application Development", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "13": {
         "title": "Module 13 - Big Data in Healthcare",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/13/overview.html"},
+          "end": { "title": "End of Module 13: Big Data in Healthcare", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "14": {
         "title": "Module 14 - Case Studies and Real-World Applications",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/14/overview.html"},
+          "end": { "title": "End of Module 14: Case Studies and Real-World Applications", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "15": {
         "title": "Module 15 - Course Wrap-Up",
         "pages": {
+          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/15/overview.html"},
+          "end": { "title": "End of Module 15: Course Wrap-Up", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "99": {

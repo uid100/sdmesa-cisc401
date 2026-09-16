@@ -1,0 +1,68 @@
+<div id="page" style="margin: 20px;">
+
+        <h1>Data Integrity</h1>
+        <p>
+            Data integrity refers to the accuracy, consistency, and reliability of data throughout its lifecycle. It is
+            a
+            critical aspect of database management and ensures that data remains valid and reliable for decision-making
+            and
+            analysis. Data integrity is maintained through various mechanisms, including data validation, constraints,
+            and
+            error checking.
+        </p>
+
+        <p>
+            Two key components that help maintain database integrity are data validation and data constraints:
+        </p>
+
+        <div id="validation" class="accordion-item">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#validation-info"
+                aria-expanded="false" aria-controls="validation-info">
+                <h3>Data Validation:</h3>
+            </button>
+            <div id="validation-info" class="accordion-collapse collapse show" aria-labelledby="validation"
+                data-bs-parent="#concepts" style="margin:20px;">
+                <p>
+                    Data Validation is the process of ensuring that the data entered into the database meets certain
+                    criteria before being accepted. This can involve verifying the correctness of data formats (e.g.,
+                    ensuring a phone number has the proper format), the range of values (e.g., an age must be between
+                    0 and 120), and the completeness of data entries (e.g., a required field must not be left empty).
+                </p>
+                <p>
+                    Data validation can be performed at the application level, where users are prompted to correct
+                    errors before submitting data, or at the database level, where constraints are enforced to prevent
+                    invalid data from being stored.
+                </p>
+            </div> <!-- #validation-info -->
+        </div> <!-- #validation -->
+
+        <div id="constraints" class="accordion-item">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#constraints-info"
+                aria-expanded="false" aria-controls="constraints-info">
+                <h3>Data Constraints:</h3>
+            </button>
+            <div id="constraints-info" class="accordion-collapse collapse show" aria-labelledby="constraints"
+                data-bs-parent="#concepts" style="margin:20px;">
+                <p>
+                    Data Constraints are rules applied to the database schema itself to enforce integrity. These include
+                    domain constraints, which define permissible values for a column; key constraints, ensuring unique
+                    identification of records; and referential constraints, which maintain consistency between related
+                    tables.
+                </p>
+                <p>
+                    By combining data validation at the application level with strong data constraints at the database
+                    level, organizations can ensure that their databases are reliable, accurate, and reflective of
+                    real-world conditions.
+                </p>
+            </div> <!-- #constraints-info -->
+        </div> <!-- #constraints -->
+
+
+        <h3 class="alert alert-info">ToDo:</h3>
+        <ul>
+            <li><strong>Read:</strong> Database Design 2d Ed (Watt), Ch.9 Integrity Rules and Constraints</li>
+            <li><strong>Read:</strong> Database Design 2d Ed (Watt), Ch.12 Normalization</li>
+            <li><strong>Review:</strong> Lecture Notes and Module Content</li>
+            <li><strong>Contribute:</strong> Data Collection and Analysis Discussion</li>
+        </ul>
+    </div> <!-- #page -->

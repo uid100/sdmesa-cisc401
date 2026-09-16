@@ -74,6 +74,7 @@
           "keys": { "title": "Primary and Foreign Keys", "type": "content", "source": "/content/04/keys.html" },
           "erd": { "title": "Entity-Relationship Diagrams", "type": "content", "source": "/content/04/erd.html" },
           "erd-more": { "title": "Entity-Relationship Diagrams (continued)", "type": "content", "source": "/content/04/erd2.html" },
+          "ex2-erd": { "title": "Exercise 2: ERD", "type": "content", "source": "/content/04/ex2-erd.html" },
           "end": { "title": "End of Module 4: Data Models and Modeling", "type": "content", "source": "/content/end-module.html" }
         }
       },

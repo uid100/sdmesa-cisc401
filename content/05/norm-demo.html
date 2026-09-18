@@ -24,7 +24,7 @@
                     inconsistencies and redundancy. By normalizing the MedStaff database, we can reduce redundancy and
                     improve data integrity.
                 </p>
-                <pre style="border: solid; margin:auto; width:50%;">
+                <pre style="border: solid; margin:auto; width:80%;">
 CREATE TABLE MedicalStaff (
     personnel_id INT PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE MedicalStaff (
                     pieces of data. In the provided table, the full_name column contains multiple pieces of information
                     (first name, last name, etc.), so we will split it into separate columns.
                 </p>
-                <pre style="border: solid; margin:auto; width:50%;">
+                <pre style="border: solid; margin:auto; width:80%;">
                     CREATE TABLE MedicalStaff (
                         personnel_id INT PRIMARY KEY,
                         first_name VARCHAR(50) NOT NULL,

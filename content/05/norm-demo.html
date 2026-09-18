@@ -57,16 +57,16 @@ CREATE TABLE MedicalStaff (
                     (first name, last name, etc.), so we will split it into separate columns.
                 </p>
                 <pre style="border: solid; margin:auto; width:80%;">
-                    CREATE TABLE MedicalStaff (
-                        personnel_id INT PRIMARY KEY,
-                        first_name VARCHAR(50) NOT NULL,
-                        last_name VARCHAR(50) NOT NULL,
-                        role_name VARCHAR(50) NOT NULL,
-                        specialty_name VARCHAR(100) NULL,
-                        hospital_name VARCHAR(100) NOT NULL,
-                        show_movie VARCHAR(100) NOT NULL,
-                        location VARCHAR(100) NOT NULL
-                    );
+CREATE TABLE MedicalStaff (
+    personnel_id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    role_name VARCHAR(50) NOT NULL,
+    specialty_name VARCHAR(100) NULL,
+    hospital_name VARCHAR(100) NOT NULL,
+    show_movie VARCHAR(100) NOT NULL,
+    location VARCHAR(100) NOT NULL
+);
                 </pre>
 
                 <p>
@@ -113,34 +113,34 @@ CREATE TABLE MedicalStaff (
             <ol>
                 <li>MedicalStaff Table (Personnel Information)
                     <pre>
-            CREATE TABLE MedicalStaff (
-                personnel_id INT PRIMARY KEY,
-                first_name VARCHAR(50) NOT NULL,
-                last_name VARCHAR(50) NOT NULL,
-                role_name VARCHAR(50) NOT NULL,
-                specialty_id INT NULL,
-                hospital_id INT NOT NULL,
-                FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id),
-                FOREIGN KEY (hospital_id) REFERENCES Hospitals(hospital_id)
-            );
+CREATE TABLE MedicalStaff (
+    personnel_id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    role_name VARCHAR(50) NOT NULL,
+    specialty_id INT NULL,
+    hospital_id INT NOT NULL,
+    FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id),
+    FOREIGN KEY (hospital_id) REFERENCES Hospitals(hospital_id)
+);
         </pre>
                 </li>
                 <li>Hospitals Table
                     <pre>
-            CREATE TABLE Hospitals (
-                hospital_id INT PRIMARY KEY,
-                hospital_name VARCHAR(100) NOT NULL,
-                location VARCHAR(100) NOT NULL,
-                show_movie VARCHAR(100) NOT NULL
-            );
+CREATE TABLE Hospitals (
+    hospital_id INT PRIMARY KEY,
+    hospital_name VARCHAR(100) NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    show_movie VARCHAR(100) NOT NULL
+);
         </pre>
                 </li>
                 <li>Specialties Table
                     <pre>
-            CREATE TABLE Specialties (
-                specialty_id INT PRIMARY KEY,
-                specialty_name VARCHAR(100) NOT NULL
-            );
+CREATE TABLE Specialties (
+    specialty_id INT PRIMARY KEY,
+    specialty_name VARCHAR(100) NOT NULL
+);
         </pre>
                 </li>
             </ol>
@@ -199,44 +199,44 @@ CREATE TABLE MedicalStaff (
             <li>MedicalStaff Table (Personnel Information)<br>
                 This remains the same as in 2NF.
                 <pre>
-                    CREATE TABLE MedicalStaff (
-                        personnel_id INT PRIMARY KEY,
-                        first_name VARCHAR(50) NOT NULL,
-                        last_name VARCHAR(50) NOT NULL,
-                        role_name VARCHAR(50) NOT NULL,
-                        specialty_id INT NULL,
-                        hospital_id INT NOT NULL,
-                        FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id),
-                        FOREIGN KEY (hospital_id) REFERENCES Hospitals(hospital_id)
-                    );                    
+CREATE TABLE MedicalStaff (
+    personnel_id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    role_name VARCHAR(50) NOT NULL,
+    specialty_id INT NULL,
+    hospital_id INT NOT NULL,
+    FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id),
+    FOREIGN KEY (hospital_id) REFERENCES Hospitals(hospital_id)
+);                    
         </pre>
             </li>
             <li>Hospitals Table (No Transitive Dependencies)<br>
                 The show_movie column has been removed.
                 <pre>
-            CREATE TABLE Hospitals (
-                hospital_id INT PRIMARY KEY,
-                hospital_name VARCHAR(100) NOT NULL,
-                location VARCHAR(100) NOT NULL
-            );
+CREATE TABLE Hospitals (
+    hospital_id INT PRIMARY KEY,
+    hospital_name VARCHAR(100) NOT NULL,
+    location VARCHAR(100) NOT NULL
+);
         </pre>
             </li>
             <li>Specialties Table <br>
                 This is also unchanged.
                 <pre>
-                    CREATE TABLE Specialties (
-                        specialty_id INT PRIMARY KEY,
-                        specialty_name VARCHAR(100) NOT NULL
-                    );                    
+CREATE TABLE Specialties (
+    specialty_id INT PRIMARY KEY,
+    specialty_name VARCHAR(100) NOT NULL
+);                    
                 </pre>
             </li>
             <li>HospitalShows Table<br>
                 This new table holds the show_movie information.
                 <pre>
-            CREATE TABLE HospitalShows (
-                hospital_id INT PRIMARY KEY,
-                show_movie VARCHAR(100) NOT NULL
-            );
+CREATE TABLE HospitalShows (
+    hospital_id INT PRIMARY KEY,
+    show_movie VARCHAR(100) NOT NULL
+);
         </pre>
             </li>
         </ol>

@@ -82,6 +82,11 @@
         "title": "Module 5 - Database Design",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/05/overview.html"},
+          "constraints": { "title": "Data Constraints", "type": "content", "source": "/content/05/constraints.html" },
+          "normalization": { "title": "Database Normalization", "type": "content", "source": "/content/05/normalization.html" },
+          "ex3-normalization": { "title": "Exercise 3: Normalization", "type": "content", "source": "/content/05/norm-demo.html" },
+          "uncertainty": { "title": "Handling Uncertainty in Data", "type": "content", "source": "/content/05/uncertainty.html" },
+          "disc-datacollection": { "title": "Discussion: Data Collection and Uncertainty", "type": "content", "source": "/content/05/disc-datacollection.html" },
           "end": { "title": "End of Module 5: Database Design", "type": "content", "source": "/content/end-module.html" }
         }
       },

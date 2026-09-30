@@ -97,7 +97,7 @@
           "joins": { "title": "Table Joins", "type": "content", "source": "content/06/joins.html" },
           "subqueries": { "title": "Subqueries", "type": "content", "source": "content/06/subqueries.html" },
           "schema": { "title": "Database Schema", "type": "content", "source": "content/06/schema.html" },
-          "ex4-joins": { "title": "Exercise 4: Subqueries", "type": "content", "source": "content/06/ex4-joins.html" },
+          "ex4-joins": { "title": "Exercise 4: Subqueries", "type": "content", "source": "content/06/ex-joins.html" },
           "end": { "title": "End of Module 6: Advanced SQL Topics", "type": "content", "source": "content/06/end.html" } 
         }
       },

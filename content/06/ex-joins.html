@@ -1,0 +1,117 @@
+<h2 style="display: none;">Multi-Table SQL Queries</h2>
+<div class="card">
+    <div class="card-header"> Multi-Table SQL Queries</div>
+    <div class="card-body">
+        <p>
+            Complete the following exercises to practice writing 
+            multi-table SQL queries.
+        </p>
+
+        <h3>Database Setup</h3>
+        <p>
+            Campus network restrictions prevent access to the instructor-hosted database.
+            You will create and populate the database locally using SQL Server Express,
+            just as you did in the previous database exercise.
+        </p>
+        <ol>
+            <li>
+                Connect to your local SQL Server Express instance using VS Code as before.
+            </li>
+            <li>
+                Open and execute the provided
+                <strong>01_CreateDatabase.sql</strong> script to create the database and tables.
+            </li>
+            <li>
+                Open and execute the provided
+                <strong>02_SeedData.sql</strong> script to populate the tables with data.
+            </li>
+            <li>
+                Verify that the database was created successfully and contains records.
+            </li>
+        </ol>
+        <p>
+            Example SQL Server Express connection:
+        </p>
+<pre>
+Server=localhost\SQLEXPRESS;
+Database=PatientRecordsDB;
+Trusted_Connection=True;
+TrustServerCertificate=True;
+</pre>
+
+        <p>
+            The exact server name may vary depending on your installation. Use the same
+            SQL Server Express instance you used in the previous exercise.
+        </p>
+
+        <h3>Submission Requirements</h3>
+
+<ul>
+    <li>
+        Submit your queries as a single SQL script file.
+    </li>
+    <li>
+        Include your name and the date in the file header comments.
+    </li>
+    <li>
+        Include the exercise number in a comment before each query.
+    </li>
+    <li>
+        Ensure each query executes successfully against your local copy of the database.
+    </li>
+</ul>
+
+<div style="padding:20px;">
+    <pre>
+-- Student Name:
+-- Date:
+
+-- Exercise 1: List Patients and Their Doctors
+-- Retrieve the full names of all patients of Dr. Ashley Mitchell.
+
+
+
+-- Exercise 2: Find Patients with Allergies
+-- Which patients are allergic to Peanuts?
+
+
+
+-- Exercise 3: Find Doctors in a Specific Department
+-- Which Doctors (First and Last Name) are in Paediatrics or Paediatric Surgery?
+
+
+
+-- Exercise 4: Insurance Providers for Dr. Stephanie Hernandez's Patients
+-- List the patients of Dr. Stephanie Hernandez and their insurance providers.
+
+
+
+-- Exercise 5: List a Particular Doctor's Appointments
+-- List all appointments for Dr. Ashley Mitchell, including patient names and appointment dates.
+
+
+
+-- Exercise 6: Patients with Multiple Appointments
+-- Find patients who have multiple appointments.
+
+
+
+-- Exercise 7: List the Medications Prescribed by Each Doctor
+-- Retrieve the full list of medications and dosages along with the doctors who prescribed them.
+
+
+
+-- Exercise 8: Find Patients Who Have Missed Their Appointments
+-- Retrieve a list of patients who have appointments marked as 'Missed'.
+
+
+
+-- Exercise 9: Find Prescriptions for a Patient
+-- What medications have been prescribed to Matthew Thompson?
+
+
+
+-- Exercise 10: How Many Patients Have Appointments in Radiology?
+-- Count the number of distinct patients who have appointments with doctors in the Radiology department.
+    </pre>
+</div>

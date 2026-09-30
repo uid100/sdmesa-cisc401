@@ -93,15 +93,19 @@
       "06": {
         "title": "Module 6 - Advanced SQL Topics",
         "pages": {
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/06/overview.html"},
-          "end": { "title": "End of Module 6: Advanced SQL Topics", "type": "content", "source": "/content/end-module.html" } 
+          "overview": {  "title": "Module Overview", "type": "content", "source": "content/06/overview.html"},
+          "joins": { "title": "Table Joins", "type": "content", "source": "content/06/joins.html" },
+          "subqueries": { "title": "Subqueries", "type": "content", "source": "content/06/subqueries.html" },
+          "schema": { "title": "Database Schema", "type": "content", "source": "content/06/schema.html" },
+          "ex4-joins": { "title": "Exercise 4: Subqueries", "type": "content", "source": "content/06/ex4-joins.html" },
+          "end": { "title": "End of Module 6: Advanced SQL Topics", "type": "content", "source": "content/06/end.html" } 
         }
       },
       "07": {
         "title": "Module 7 - Data Integration and Standards",
         "pages": {
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/07/overview.html"},
-          "end": { "title": "End of Module 7: Data Integration and Standards", "type": "content", "source": "/content/end-module.html" }
+          "overview": {  "title": "Module Overview", "type": "content", "source": "content/07/overview.html"},
+          "end": { "title": "End of Module 7: Data Integration and Standards", "type": "content", "source": "content/end-module.html" }
         }
       },
       "08": {

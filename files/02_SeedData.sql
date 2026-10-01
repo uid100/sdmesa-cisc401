@@ -1,3 +1,5 @@
+USE PatientRecordsDB;
+
 -- Patients
 BEGIN
     INSERT INTO Patients
@@ -1068,7 +1070,7 @@ BEGIN
     FROM Insurance Ins JOIN Patients P
         ON Ins.PatientID = P.PatientID;
 
-
+END
 
 -- Seed the Medications table
 BEGIN

@@ -170,12 +170,12 @@
           "sql-start": {  "title": "Module Overview", "type": "content", "source": "content/99/getting-started.html"},
           "sql-windows": {  "title": "Module Overview", "type": "content", "source": "content/99/getting-started-win.html" },
           "sql-macos": {  "title": "Module Overview", "type": "content", "source": "content/99/getting-started-macos.html"},
-          "db-tutorial": {  "title": "Module Overview", "type": "content", "source": "content/99/database-tutorial.html"},
-          "fundamentals": {  "title": "Module Overview", "type": "content", "source": "content/99/fundamentals.html"},
-          "select": {  "title": "Module Overview", "type": "content", "source": "content/99/select-basics.html"},
-          "sql-checklist": {  "title": "Module Overview", "type": "content", "source": "content/99/sql-db-basics-checklist.html"},
-          "joins": {  "title": "Module Overview", "type": "content", "source": "content/99/sql-joins.html"},
-          "subqueries": {  "title": "Module Overview", "type": "content", "source": "content/99/subqueries.html"}
+          "sql-checklist": {  "title": "Review: Database Basics", "type": "content", "source": "content/99/sql-db-basics-checklist.html"},
+          "fundamentals": {  "title": "Review: Database Basics", "type": "content", "source": "content/99/fundamentals.html"},
+          "db-tutorial": {  "title": "Video Resource", "type": "content", "source": "content/99/database-tutorial.html"},
+          "select": {  "title": "Video: SELECT Statements", "type": "content", "source": "content/99/select-basics.html"},
+          "joins": {  "title": "Video: SQL Joins", "type": "content", "source": "content/99/sql-joins.html"},
+          "subqueries": {  "title": "Video: Subqueries", "type": "content", "source": "content/99/subqueries.html"}
         }
       }
     }

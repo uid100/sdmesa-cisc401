@@ -1,0 +1,118 @@
+
+    <div class="container my-5 bg-light" style="max-width: 800px;">
+        
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-6 fw-bold text-primary">Database Basics Checklist</h1>
+            <p class="lead text-muted">A step-by-step guide to understanding client-server database architecture and making your first connection.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="card mb-4 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-primary fs-6 me-3">Step 1</span>
+                    <h5 class="card-title m-0 fw-bold"><i class="bi bi-hdd-network me-2 text-primary"></i>The Database Server</h5>
+                </div>
+                <p class="card-text text-secondary">
+                    The <strong>database server</strong> runs as a background process providing a service that quietly waits for incoming network requests.
+                </p>
+                <div class="alert alert-info border-0 bg-light-subtle mb-0 text-dark">
+                    <i class="bi bi-check-circle-fill me-2 text-info"></i>
+                    <strong>Action:</strong> Check that your database server is running. It may be hosted on your local computer or on a remote machine anywhere on the network.
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card mb-4 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-primary fs-6 me-3">Step 2</span>
+                    <h5 class="card-title m-0 fw-bold"><i class="bi bi-laptop me-2 text-primary"></i>The Database Client</h5>
+                </div>
+                <p class="card-text text-secondary">
+                    The <strong>database client application</strong> is a software program that you interact with directly. It sends SQL requests to the server and receives data results back to display on your screen.
+                </p>
+                <div class="alert alert-info border-0 bg-light-subtle mb-0 text-dark">
+                    <i class="bi bi-check-circle-fill me-2 text-info"></i>
+                    <strong>Action:</strong> While there are many client tools available, we will use <strong>Visual Studio Code</strong> with SQL extensions. Make sure VS Code is installed, configured, and running.
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card mb-4 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-primary fs-6 me-3">Step 3</span>
+                    <h5 class="card-title m-0 fw-bold"><i class="bi bi-key me-2 text-primary"></i>Establish Connection & Authentication</h5>
+                </div>
+                <p class="card-text text-secondary">
+                    Your client needs to form a connection to the server before sending commands. How you authenticate depends on your system setup:
+                </p>
+                
+                <div class="row g-3 mb-2">
+                    <div class="col-md-6">
+                        <div class="p-3 border rounded bg-white h-100">
+                            <h6 class="fw-bold text-success"><i class="bi bi-windows me-1"></i> Windows & Local Server</h6>
+                            <ul class="mb-0 text-secondary small ps-3">
+                                <li><strong>Host:</strong> <code>localhost\SQLEXPRESS</code></li>
+                                <li><strong>Port:</strong> <code>1433</code></li>
+                                <li><strong>Auth:</strong> Windows Authentication</li>
+                                <li><strong>Encryption:</strong> Set to <em>Optional</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 border rounded bg-white h-100">
+                            <h6 class="fw-bold text-warning-emphasis"><i class="bi bi-shield-lock me-1"></i> Non-Windows / Remote Server</h6>
+                            <p class="mb-0 text-secondary small">
+                                Use <strong>SQL Authentication</strong> with an explicit <strong>Username</strong> and <strong>Password</strong>, as the client and server are not already logged into the same OS account.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="card mb-4 shadow-sm border-0 border-start border-primary border-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-primary fs-6 me-3">Step 4</span>
+                    <h5 class="card-title m-0 fw-bold"><i class="bi bi-database me-2 text-primary"></i>Find or Create the Database</h5>
+                </div>
+                <p class="card-text text-secondary">
+                    A database defines the <strong>schema</strong> (the set of tables, relationships, and rules) you will interact with.
+                </p>
+                
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item bg-transparent ps-0 text-secondary">
+                        <i class="bi bi-arrow-right-short text-primary"></i> Point to the <code>master</code> database first when executing a script to <strong>CREATE</strong> a brand new database.
+                    </li>
+                    <li class="list-group-item bg-transparent ps-0 text-secondary">
+                        <i class="bi bi-arrow-right-short text-primary"></i> Once created, switch context to your target database using the SQL command:
+                        <div class="my-2 ms-3">
+                            <code>USE [database_name];</code>
+                        </div>
+                        or select it using the database drop-down menu in VS Code.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="card mb-4 shadow-sm border-0 border-start border-success border-4 bg-success-subtle">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-success fs-6 me-3">Step 5</span>
+                    <h5 class="card-title m-0 fw-bold text-success-emphasis"><i class="bi bi-terminal me-2"></i>Write & Run Queries</h5>
+                </div>
+                <p class="card-text text-dark">
+                    With an active connection established and the correct database selected, you are ready to write and execute your SQL queries to insert, modify, and retrieve data!
+                </p>
+            </div>
+        </div>
+
+    </div>

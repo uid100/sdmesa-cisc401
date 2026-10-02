@@ -1,0 +1,160 @@
+<div class="container my-4">
+
+    <div class="text-center mb-4">
+        <h2>Database Basics: Getting Started</h2>
+        <p class="lead">
+            Before you can run SQL queries, follow these simple steps in order.
+            Most connection problems happen because one of these steps was skipped.
+        </p>
+    </div>
+
+    <div class="card mb-3 border-primary">
+        <div class="card-header bg-primary text-white">
+            Step 1: Make Sure the Database Server Is Running
+        </div>
+        <div class="card-body">
+            <p>
+                The <strong>database server</strong> is a background service that waits
+                for requests from client programs. It may be running:
+            </p>
+            <ul>
+                <li>On your local computer</li>
+                <li>On another computer somewhere on the network</li>
+            </ul>
+
+            <p>
+                Before doing anything else, verify that the server is running and available.
+                If the server is stopped, no client application can connect to it.
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-3 border-success">
+        <div class="card-header bg-success text-white">
+            Step 2: Start the Database Client
+        </div>
+        <div class="card-body">
+            <p>
+                A <strong>database client</strong> is a program that sends requests to the
+                database server and displays the results.
+            </p>
+
+            <p>
+                In this course, our client application is:
+            </p>
+
+            <ul>
+                <li><strong>Visual Studio Code (VS Code)</strong></li>
+                <li>SQL Server extensions installed</li>
+            </ul>
+
+            <p>
+                Make sure VS Code is installed and running before continuing.
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-3 border-warning">
+        <div class="card-header bg-warning">
+            Step 3: Connect the Client to the Server
+        </div>
+        <div class="card-body">
+            <p>
+                The client must create a connection to the database server.
+            </p>
+
+            <h6>Typical Windows Local Setup</h6>
+            <ul>
+                <li><strong>Host:</strong> localhost\SQLEXPRESS</li>
+                <li><strong>Port:</strong> 1433</li>
+                <li><strong>Authentication:</strong> Windows Authentication</li>
+                <li><strong>Encryption:</strong> Optional</li>
+            </ul>
+
+            <p>
+                If you are using a different operating system or a different server,
+                you will usually use <strong>SQL Authentication</strong> and provide
+                a username and password.
+            </p>
+
+            <p class="mb-0">
+                Successful connection = VS Code can now communicate with the server.
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-3 border-info">
+        <div class="card-header bg-info text-white">
+            Step 4: Find or Create the Correct Database
+        </div>
+        <div class="card-body">
+            <p>
+                A database contains the tables and other objects you will work with.
+                Make sure you are using the correct database before running queries.
+            </p>
+
+            <ul>
+                <li>Use the provided script to create the database and tables when needed.</li>
+                <li>Connect to the <strong>master</strong> database when creating a new database.</li>
+                <li>Select the course database before running queries.</li>
+            </ul>
+
+            <p>You can change databases by using:</p>
+
+            <pre><code>USE [database_name];</code></pre>
+
+            <p class="mb-0">
+                Many tools also allow you to choose the active database from a drop-down menu.
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-3 border-danger">
+        <div class="card-header bg-danger text-white">
+            Step 5: Write and Run SQL Queries
+        </div>
+        <div class="card-body">
+            <p>
+                Once you are:
+            </p>
+
+            <ol>
+                <li>Connected to the server</li>
+                <li>Using the correct database</li>
+            </ol>
+
+            <p>
+                You can begin writing and executing SQL commands.
+            </p>
+
+            <ul>
+                <li><strong>INSERT</strong> data into tables</li>
+                <li><strong>SELECT</strong> data from tables</li>
+                <li><strong>UPDATE</strong> existing data</li>
+                <li><strong>DELETE</strong> data when appropriate</li>
+            </ul>
+
+            <p class="mb-0">
+                The server processes your request and returns the results to VS Code.
+            </p>
+        </div>
+    </div>
+
+    <div class="card border-dark">
+        <div class="card-header bg-dark text-white">
+            Quick Review
+        </div>
+        <div class="card-body">
+            <h5>The Basic Sequence</h5>
+
+            <ol class="mb-0">
+                <li><strong>Start the database server.</strong></li>
+                <li><strong>Open VS Code.</strong></li>
+                <li><strong>Connect to the server.</strong></li>
+                <li><strong>Select or create the correct database.</strong></li>
+                <li><strong>Write and run SQL queries.</strong></li>
+            </ol>
+        </div>
+    </div>
+
+</div>

@@ -105,6 +105,9 @@
         "title": "Module 7 - Data Integration and Standards",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "content/07/overview.html"},
+          "i_e": { "title": "Data Integration and Exchange", "type": "content", "source": "/content/07/i_e.html" },
+          "hie": { "title": "Health Information Exchange", "type": "content", "source": "/content/07/hie.html" },
+          "hl7": { "title": "Health Level 7 (HL7)", "type": "content", "source": "/content/07/hl7.html" },
           "end": { "title": "End of Module 7: Data Integration and Standards", "type": "content", "source": "content/end-module.html" }
         }
       },
@@ -112,8 +115,6 @@
         "title": "Module 8 - Data Security and Privacy",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/08/overview.html"},
-          "i_e": { "title": "Data Integration and Exchange", "type": "content", "source": "/content/08/i_e.html" },
-          "hie": { "title": "Health Information Exchange", "type": "content", "source": "/content/08/hie.html" },
           "end": { "title": "End of Module 8: Data Security and Privacy", "type": "content", "source": "/content/end-module.html" }
         }
       },

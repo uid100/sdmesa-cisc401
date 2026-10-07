@@ -113,6 +113,7 @@
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/08/overview.html"},
           "i_e": { "title": "Data Integration and Exchange", "type": "content", "source": "/content/08/i_e.html" },
+          "hie": { "title": "Health Information Exchange", "type": "content", "source": "/content/08/hie.html" },
           "end": { "title": "End of Module 8: Data Security and Privacy", "type": "content", "source": "/content/end-module.html" }
         }
       },

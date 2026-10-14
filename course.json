@@ -118,6 +118,7 @@
           "privacy": { "title": "Healthcare Privacy and Security", "type": "content", "source": "content/08/privacy.html" },
           "cybersecurity": { "title": "Data Vulnerabilities in Cybersecurity", "type": "content", "source": "content/08/cybersecurity.html" },
           "encryption": { "title": "Data Encryption Techniques", "type": "content", "source": "content/08/encryption.html" },
+          "disc-breach": { "title": "Discussion: Data Breaches in Healthcare", "type": "content", "source": "content/08/disc-breach.html" },
           "end": { "title": "End of Module 8: Data Security and Privacy", "type": "content", "source": "content/end-module.html" }
         }
       },

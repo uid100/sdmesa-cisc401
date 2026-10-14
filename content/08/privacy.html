@@ -1,0 +1,175 @@
+<div class="card">
+        <div class="card-header">
+            <h2 id="module-title">Data Security and Privacy in Healthcare</h2>
+        </div> <!-- .card-header -->
+        <div class="card-body">
+            <p>
+                Data security and privacy are critical in healthcare due to the sensitive nature of patient information.
+                This module covers the importance of data security, HIPAA compliance, encryption techniques, access
+                control mechanisms, and secure database design principles.
+            </p>
+    <h2>Data Security and Privacy in Healthcare</h2>
+
+    <h3>Objective</h3>
+    <p>
+        Understand
+    <ol>
+        <li>
+            the critical importance of data security in healthcare,
+        </li>
+        <li>
+            the role of HIPAA compliance,
+        </li>
+        <li>
+            key encryption techniques and access control mechanisms,
+        </li>
+        <li>
+            designing a secure healthcare database.
+        </li>
+    </ol>
+    </p>
+
+    <h3>Data Security in Healthcare</h3>
+
+    <details>
+        <summary>Importance</summary>
+        <ul>
+            <li>
+                Healthcare data is highly sensitive, containing personal, medical, and financial information.
+            </li>
+            <li>
+                Cyberattacks in healthcare have increased significantly, leading to financial loss, identity theft, and
+                compromise of patient privacy.
+            </li>
+            <li>
+                The ethical and legal responsibilities of healthcare organizations to protect patient data.
+            </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Discussion</p>
+        <ul>
+            <li>
+                <em>Why do you think healthcare data is targeted more than other types of data?</em>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>Regulatory Compliance</summary>
+        <h3>HIPAA Compliance and Healthcare Regulations</h3>
+        <ul>
+            <li>
+                <strong>Overview of HIPAA</strong>
+                <ul>
+                    <li>Health Insurance Portability and Accountability Act (HIPAA) purpose and scope.</li>
+                    <li>Protected Health Information (PHI):
+                        <p style="width:80%; margin:10px auto; border: black solid 1px">
+                            Individually identifiable health information that is transmitted or maintained in any form
+                            or medium (electronic, oral, or paper) by a covered entity or its business associates,
+                            excluding certain educational and employment records. Includes personal identifiers, medical
+                            history, test results, etc.
+                        </p>
+                    </li>
+                    <li>HIPAA Privacy Rule: controls how PHI can be used and disclosed.</li>
+                    <li>HIPAA Security Rule: standards for the protection of electronic PHI (ePHI).</li>
+                    <li>HIPAA Breach Notification Rule: guidelines for responding to data breaches.</li>
+                    <li>Consequences for non-compliance: fines, legal action, loss of reputation.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Key Regulations and Guidelines</h3>
+        <ul>
+            Other relevant frameworks
+            <li>General Data Protection Regulation (GDPR) (if applicable globally).</li>
+            <li>HITECH Act (Health Information Technology for Economic and Clinical Health).</li>
+        </ul>
+
+        <h3>Case Study</h3>
+        <ul>
+            Discussion
+            <li>
+                <a
+                    href="https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/anthem/index.html">
+                    Anthem Pays OCR $16 Million in Record HIPAA Settlement Following Largest Health Data Breach in
+                    History
+                </a>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>Encryption and Access Control</summary>
+        <h3>Encryption and Access Control</h3>
+        <p>Key Concepts</p>
+        <ul>
+            <li>Data Encryption
+                <p style="width:80%; margin:10px auto; border: black solid 1px">
+                    The process of converting plaintext data into a scrambled format (ciphertext) using algorithms to
+                    prevent unauthorized access.</p>
+                <ul>
+                    Types of encryption
+                    <li>Symmetric encryption (private key)</li>
+                    <li>Asymmetric encryption (private key/public key)</li>
+                </ul>
+            </li>
+            <li>Vulernabilities
+                <ul>
+                    <li>Data storage
+                        <p style="width:80%; margin:10px auto; border: black solid 1px">
+                            Involves storing information in a format that can be accessed and used. Data can be stored
+                            in databases, which structure data by similarity or group affiliation, or in electronic
+                            records, which allow data to be accessed from multiple locations.</p>
+                    </li>
+                    <li>Data processing
+                        <p style="width:80%; margin:10px auto; border: black solid 1px">
+                            Involves manipulating data to produce information. Data processing can be done manually or
+                            electronically and involves a range of operations performed on data, including collection,
+                            recording, organization, and storage.</p>
+                    </li>
+                    <li>
+                        Data transmission
+                        <p style="width:80%; margin:10px auto; border: black solid 1px">
+                            Involves transferring data between devices or systems, usually over a network. Data
+                            transmission requires a sender, receiver, message, medium, and protocol. The medium is the
+                            physical path used to transmit data, such as a cable or wireless connection. The protocol is
+                            a set of rules that govern the format, timing, and sequencing of the data transmission..</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <h3>Access Control Mechanisms</h3>
+        <ul>
+            <li>Role-Based Access Control (RBAC): Restricting data access based on roles (e.g., doctors, nurses,
+                admins).</li>
+            <li>The Principle of Least Privilege: only granting users the minimum level of access needed for their role.
+            </li>
+            <li>Multifactor Authentication (MFA): adding an extra layer of security.</li>
+            <li>Auditing and monitoring access logs to identify potential security threats.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Secure Database Design Principles</summary>
+
+        <h3>Core Principles of Secure Database Design</h3>
+        <ul>
+            <li>Separation of Duties: Ensuring different roles within a healthcare system have appropriate access to
+                only what
+                they need.</li>
+            <li>Data Minimization: Only collect and store data that is necessary for healthcare operations.</li>
+            <li>Normalization: Reducing redundancy to minimize the attack surface for breaches.</li>
+            <li>Database Encryption: Encrypting sensitive fields in the database (e.g., SSN, medical records).</li>
+            <li>Audit Logging: Maintaining detailed logs of data access and modifications.</li>
+        </ul>
+        <h3>Security Best Practices for Healthcare Databases</h3>
+        <ul>
+            <li>Input Validation: Protecting against SQL Injection and other attacks.</li>
+            <li>Stored Procedures: Using stored procedures to reduce risk.</li>
+            <li>Access Controls at the Database Level: Applying fine-grained controls to restrict who can view or edit
+                specific data fields.</li>
+        </ul>
+    </details>
+
+    </div> <!-- .card-body -->
+    </div> <!-- .card -->

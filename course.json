@@ -115,6 +115,7 @@
         "title": "Module 8 - Data Security and Privacy",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "content/08/overview.html"},
+          "privacy": { "title": "Healthcare Privacy and Security", "type": "content", "source": "content/08/privacy.html" },
           "end": { "title": "End of Module 8: Data Security and Privacy", "type": "content", "source": "content/end-module.html" }
         }
       },

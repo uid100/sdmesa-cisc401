@@ -1,257 +1,305 @@
-    <h1 style="display: none;">Exercise: Hospital Staffing Schedule</h1>
-
-    <div id="objective">
-        <h2>Objective</h2>
-        <p>
-            Design and implement SQL tables and queries to create a staffing schedule for a hospital.
-        </p>
-        <p>
-            This includes managing shifts for doctors and nurses, assigning departments, and tracking
-            schedules over time.
-        </p>
-    </div> <!-- #objective -->
-
-    <div id="overview">
-        <h2>Overview</h2>
-        <ol>
-            <li>Create the necessary SQL tables to manage staff, departments, shifts, and schedules.</li>
-            <li>Write SQL queries to populate the tables with sample data.</li>
-            <li>Write SQL queries to generate a weekly staffing schedule for a specific department.</li>
-            <li>Write a query to find staff who have overlapping shifts and may require adjustments.</li>
-        </ol>
-    </div> <!-- #overview -->
-
-    <div id="instructions">
-        <h2>Instructions</h2>
-        <div id="step1">
-            <details>
-                <summary>Step 1: Design the SQL Tables</summary>
-                <p>Design the tables. Use the following as a starting point.
-                    You'll need to define the columns, data types, and relationships
-                    between the tables.
-                </p>
-                <ol>
-                    <li><strong>Staff</strong>
-                        <ul>
-                            <li>Stores information about hospital staff (doctors, nurses, etc.)
-                            <li>Columns: `staff_id`, `first_name`, `last_name`,
-                                `role` (e.g., 'Doctor', 'Nurse'), `department_id`,
-                                `contact_number`</li>
-                        </ul>
-                    </li>
-
-                    <li><strong>Department</strong>
-                        <ul>
-                            <li>Stores department details (e.g., Emergency, Pediatrics).
-                            <li>Columns: `department_id`, `department_name`</li>
-                        </ul>
-                    </li>
-
-                    <li><strong>Shifts</strong>
-                        <ul>
-                            <li>Stores details about shift timings.</li>
-                            <li>Columns: `shift_id`, `start_time`, `end_time`, `shift_name`
-                                (e.g., 'Day Shift', 'Night Shift')</li>
-                        </ul>
-                    </li>
-
-                    <li><strong>Schedule</strong>
-                        <ul>
-                            <li>Manages the schedule, assigning staff to shifts.
-                            <li>Columns: `schedule_id`, `staff_id`, `shift_id`, `shift_date`, `department_id`
-                            </li>
-                        </ul>
-                    </li>
-                </ol>
-            </details>
-        </div> <!-- #step1 -->
-        <div id="step2">
-            <details>
-                <summary>Step 2: Create Tables</summary>
-                <p>
-                    Using the table design from step 1, create the SQL tables in your database.
-                </p>
-                <p>
-                    The following SQL statement is a hint to get you started. Note that the actual
-                    syntax may be different than this.
-                </p>
-                <p>
-                    <em>Can you create a Foreign Key reference
-                        to a table before it is created?</em>
-                </p>
-                <p>
-                    You'll need to create the SQL statements for each table (Staff, Department, Shifts,
-                    Schedule).
-                </p>
-                <p>
-                    <strong>Test and save your <code>CreateTables.sql</code> script file for submission.</strong>
-                </p>
-                <pre>
--- Staff
-    DROP TABLE IF EXISTS Staff
-    CREATE TABLE Staff (
-        staff_id INT PRIMARY KEY IDENTITY(1,1),
-        first_name VARCHAR(50),
-        last_name VARCHAR(50),
-        role VARCHAR(50),
-        department_id INT,
-        contact_number VARCHAR(20)
-        FOREIGN KEY (department_id) REFERENCES Department(department_id)
-    );
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Create the Department table
-    CREATE TABLE . . .
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Create the Shifts table
-    CREATE TABLE . . .
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Create the Schedule table
-    CREATE TABLE . . .
-        </pre>
-        </div> <!-- #step2 -->
-        <div id="step3">
-            <details>
-                <summary>Step 3: Insert Sample Data</summary>
-                <p>
-                    Once your tables are set up, populate them with sample data.
-                </p>
-                <p>
-                    Use the following SQL statements as a guide to insert sample data into the tables.
-                </p>
-                <p>
-                    In addition to these, add at least two more departments, and more staff
-                    members, and an appropriate number of shifts and schedule records to cover
-                    the needs of each department for one week.
-                </p>
-                <h3>Data Privacy and Security</h3>
-                <p>
-                    Avoid using actual patient data during testing; use anonymized or synthetic data.
-                </p>
-                <p>&nbsp;</p>
-                <p>
-                    <strong>Test and save your <code>InsertValues.sql</code> script file for submission.</strong>
-                </p>
-                <pre>
-    -- Insert sample data into the Department table
-    INSERT INTO Department (department_name)
-    VALUES ('Emergency'), ('Pediatrics'), ('Surgery');
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Insert sample data into the Staff table
-    INSERT INTO Staff (first_name, last_name, role, department_id, contact_number)
-    VALUES ('John', 'Doe', 'Doctor', 1, '123-456-7890'),
-           ('Jane', 'Smith', 'Nurse', 1, '987-654-3210'),
-           ('Alice', 'Johnson', 'Doctor', 2, '555-444-3333'),
-           ('Bob', 'Brown', 'Nurse', 3, '777-888-9999');
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Insert sample data into the Shifts table
-    INSERT INTO Shifts (start_time, end_time, shift_name)
-    VALUES ('08:00:00', '16:00:00', 'Day Shift'),
-           ('16:00:00', '00:00:00', 'Evening Shift'),
-           ('00:00:00', '08:00:00', 'Night Shift');
-        </pre>
-                <p>&nbsp;</p>
-                <pre>
-    -- Insert sample data into the Schedule table
-    INSERT INTO Schedule (staff_id, shift_id, shift_date, department_id)
-    VALUES (1, 1, '2024-10-11', 1),
-           (2, 2, '2024-10-11', 1),
-           (3, 1, '2024-10-11', 2),
-           (4, 3, '2024-10-11', 3),
-           (1, 2, '2024-10-12', 1),
-           (2, 3, '2024-10-12', 1);
-        </pre>
-            </details>
-        </div> <!-- #step3 -->
-        <div id="step4">
-            <details>
-                <summary>Step 4: Generate the Staffing Schedule</summary>
-                <p>
-                    Write a query to generate a staffing schedule grouped by department and shift
-                    for a given week.
-                </p>
-                <p>
-                    The query should return
-                <ul>
-                    <li>first name</li>
-                    <li>last name</li>
-                    <li>role</li>
-                    <li>department</li>
-                    <li>shift name</li>
-                    <li>date</li>
-                </ul>
-                </p>
-                <p>
-                    <strong>Test and save your <code>StaffingSchedule.sql</code> script file for submission.</strong>
-                </p>
-                <pre style="display:none;">
-    -- Query to generate the staffing schedule for the Emergency department over the week
-    SELECT s.first_name, s.last_name, s.role, d.department_name, sh.shift_name, sc.shift_date
-    FROM Schedule sc
-    JOIN Staff s ON sc.staff_id = s.staff_id
-    JOIN Department d ON sc.department_id = d.department_id
-    JOIN Shifts sh ON sc.shift_id = sh.shift_id
-    WHERE d.department_name = 'Emergency'
-    ORDER BY sc.shift_date, sh.start_time;
-        </pre>
-            </details>
-        </div> <!-- #step4 -->
-        <div id="step5">
-            <details>
-                <summary>Step 5: Find Overlapping Shifts</summary>
-                <p>Write an SQL query to find staff members who have overlapping shifts (e.g., if a doctor is assigned
-                    to multiple departments at the same time).</p>
-                <p>
-                    The query should return:
-                <ul>
-                    <li>staff ID</li>
-                    <li>first name</li>
-                    <li>last name</li>
-                    <li>shift date</li>
-                    <li>shift name (for the overlapping shifts)</li>
-                </ul>
-                <p>
-                    <strong>Test and save your <code>Overlap.sql</code> script file for submission.</strong>
-                </p>
-                <pre style="display: none;">
-    -- Query to find staff with overlapping shifts
-    SELECT s1.staff_id, s1.first_name, s1.last_name, sc1.shift_date, sh1.shift_name, sh2.shift_name
-    FROM Schedule sc1
-    JOIN Schedule sc2 ON sc1.staff_id = sc2.staff_id
-        AND sc1.shift_date = sc2.shift_date
-        AND sc1.shift_id != sc2.shift_id
-    JOIN Staff s1 ON sc1.staff_id = s1.staff_id
-    JOIN Shifts sh1 ON sc1.shift_id = sh1.shift_id
-    JOIN Shifts sh2 ON sc2.shift_id = sh2.shift_id
-    WHERE sh1.start_time < sh2.end_time AND sh1.end_time > sh2.start_time;
-        </pre>
-            </details>
-        </div> <!-- #step5 -->
-    </div> <!-- #instructions -->
+<section>
+    <h1>Hospital Staff Scheduling Database Project</h1>
 
     <p>
-        This approach can be adapted to real-world hospital scheduling systems, where large teams of healthcare
-        professionals must be efficiently managed across various departments and shifts.
+        In this project, you will design, create, populate, and query a relational database
+        that supports staff scheduling for a regional hospital. Hospitals operate 24 hours a day
+        and require employees from multiple departments and job roles to work a variety of shifts.
+        Your database should be realistic, organized, and capable of producing useful management reports.
     </p>
-    <h3>Submission</h3>
+
     <p>
-        Submit your SQL script files for creating tables, inserting values, generating the staffing schedule,
-        and finding overlapping shifts.
+        This is a multi-week project. Success will require steady progress throughout the assignment period.
+        Waiting until the final due date is not recommended because the database must be designed,
+        populated with data, and tested before the required SQL queries can be completed.
     </p>
+
+    <hr>
+
+    <h2>Learning Objectives</h2>
+
+    <p>Upon successful completion of this project, you will be able to:</p>
+
+    <ul>
+        <li>Design a relational database using multiple related tables.</li>
+        <li>Define primary keys and foreign keys.</li>
+        <li>Create tables using SQL.</li>
+        <li>Populate tables with realistic data.</li>
+        <li>Write SQL queries involving joins across multiple tables.</li>
+        <li>Use filtering, sorting, grouping, and aggregate functions.</li>
+        <li>Generate reports that answer common operational questions.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Business Scenario</h2>
+
     <p>
-        You may work in groups of 2-3 students for this exercise. Each student should submit their own copy of the
-        SQL scripts.
+        You have been hired as a database analyst for a regional hospital. Hospital management
+        needs a database that tracks employees, departments, work shifts, and schedule assignments.
+        Administrators need reports that help them review staffing levels, employee schedules,
+        and potential scheduling conflicts.
     </p>
+
     <p>
-        Add your name and the names of your group members to the top of each script file as a comment.
+        The database must contain enough information to realistically represent one week of hospital operations.
+        A hospital has many employees working during each shift, not merely one employee per shift.
     </p>
-    
+
+    <hr>
+
+    <h2>Required Tables</h2>
+
+    <p>
+        You must create at least the following tables. Additional tables may be added if they support
+        your design.
+    </p>
+
+    <ol>
+        <li>Department</li>
+        <li>Employee</li>
+        <li>Shift</li>
+        <li>Schedule</li>
+    </ol>
+
+    <h3>Suggested Attributes</h3>
+
+    <h4>Department</h4>
+    <ul>
+        <li>department_id (Primary Key)</li>
+        <li>department_name</li>
+    </ul>
+
+    <h4>Employee</h4>
+    <ul>
+        <li>employee_id (Primary Key)</li>
+        <li>first_name</li>
+        <li>last_name</li>
+        <li>job_title</li>
+        <li>department_id (Foreign Key)</li>
+    </ul>
+
+    <h4>Shift</h4>
+    <ul>
+        <li>shift_id (Primary Key)</li>
+        <li>shift_name</li>
+        <li>start_time</li>
+        <li>end_time</li>
+    </ul>
+
+    <h4>Schedule</h4>
+    <ul>
+        <li>schedule_id (Primary Key)</li>
+        <li>employee_id (Foreign Key)</li>
+        <li>department_id (Foreign Key)</li>
+        <li>shift_id (Foreign Key)</li>
+        <li>shift_date</li>
+    </ul>
+
+    <hr>
+
+    <h2>Minimum Data Requirements</h2>
+
+    <p>
+        To ensure meaningful reports and queries, your database must include the following
+        minimum amount of data.
+    </p>
+
+    <ul>
+        <li>5 departments</li>
+        <li>20 employees</li>
+        <li>At least 5 physicians</li>
+        <li>At least 10 nurses</li>
+        <li>At least 5 additional staff members (technicians, therapists, clerks, etc.)</li>
+        <li>3 shifts per day (Day, Evening, Night)</li>
+        <li>7 days of scheduling data</li>
+        <li>At least 60 schedule assignments</li>
+    </ul>
+
+    <p>
+        Example departments may include Emergency, Pediatrics, Surgery, Radiology,
+        Intensive Care Unit (ICU), Oncology, or Medical Records.
+    </p>
+
+    <hr>
+
+    <h2>Business Rules</h2>
+
+    <ol>
+        <li>Every employee must belong to a department.</li>
+        <li>Every schedule assignment must reference a valid employee.</li>
+        <li>Every schedule assignment must reference a valid department.</li>
+        <li>Every schedule assignment must reference a valid shift.</li>
+        <li>Each department must have multiple employees assigned during the week.</li>
+        <li>At least three intentional scheduling conflicts must exist in your data.</li>
+    </ol>
+
+    <hr>
+
+    <h2>Required SQL Queries</h2>
+
+    <p>
+        Each query must include meaningful column aliases, appropriate joins,
+        and an ORDER BY clause when applicable.
+    </p>
+
+    <h3>Query 1: Department Schedule Report</h3>
+
+    <p>
+        Display all employees scheduled within a department.
+    </p>
+
+    <p><strong>Required Output:</strong></p>
+
+    <ul>
+        <li>Employee Name</li>
+        <li>Job Title</li>
+        <li>Department Name</li>
+        <li>Shift Name</li>
+        <li>Shift Date</li>
+    </ul>
+
+    <h3>Query 2: Employee Weekly Schedule</h3>
+
+    <p>
+        Display the complete weekly schedule for a single employee.
+    </p>
+
+    <p><strong>Required Output:</strong></p>
+
+    <ul>
+        <li>Employee Name</li>
+        <li>Shift Date</li>
+        <li>Department Name</li>
+        <li>Shift Name</li>
+    </ul>
+
+    <h3>Query 3: Staffing Levels Report</h3>
+
+    <p>
+        Show how many employees are scheduled for each department and shift.
+    </p>
+
+    <p>
+        This query must use GROUP BY and COUNT().
+    </p>
+
+    <p><strong>Required Output:</strong></p>
+
+    <ul>
+        <li>Department Name</li>
+        <li>Shift Name</li>
+        <li>Number of Employees Scheduled</li>
+    </ul>
+
+    <h3>Query 4: Scheduling Conflict Report</h3>
+
+    <p>
+        Hospitals attempt to avoid assigning an employee to multiple overlapping work assignments.
+        Management would like a report identifying possible scheduling conflicts.
+    </p>
+
+    <p>
+        Before running this query, intentionally create at least three scheduling conflicts
+        in your sample data so the query returns results.
+    </p>
+
+    <p>
+        Examples of conflicts may include:
+    </p>
+
+    <ul>
+        <li>An employee assigned to two departments during the same shift.</li>
+        <li>An employee assigned to multiple overlapping shifts on the same day.</li>
+    </ul>
+
+    <p><strong>Required Output:</strong></p>
+
+    <ul>
+        <li>Employee ID</li>
+        <li>Employee Name</li>
+        <li>Shift Date</li>
+        <li>Department 1</li>
+        <li>Department 2</li>
+        <li>Shift 1</li>
+        <li>Shift 2</li>
+    </ul>
+
+    <hr>
+
+    <h2>Project Milestones</h2>
+
+    <p>
+        Progress checkpoints are required. These checkpoints help ensure that you spread
+        the work across the project period instead of attempting the entire project at the end.
+    </p>
+
+    <h3>Milestone 1: Database Design</h3>
+
+    <ul>
+        <li>Entity Relationship Diagram (ERD)</li>
+        <li>List of tables</li>
+        <li>Primary keys</li>
+        <li>Foreign keys</li>
+    </ul>
+
+    <h3>Milestone 2: Database Implementation</h3>
+
+    <ul>
+        <li>CREATE TABLE statements</li>
+        <li>Completed database schema</li>
+        <li>Evidence that all tables were created successfully</li>
+    </ul>
+
+    <h3>Milestone 3: Data Population</h3>
+
+    <ul>
+        <li>INSERT statements</li>
+        <li>Minimum data requirements satisfied</li>
+        <li>Screenshots of populated tables</li>
+    </ul>
+
+    <h3>Milestone 4: Final Submission</h3>
+
+    <ul>
+        <li>Database schema</li>
+        <li>Sample data</li>
+        <li>All required SQL queries</li>
+        <li>Query results</li>
+        <li>Project documentation</li>
+    </ul>
+
+    <hr>
+
+    <h2>Submission Requirements</h2>
+
+    <p>
+        Submit the following files:
+    </p>
+
+    <ul>
+        <li>CreateTables.sql</li>
+        <li>InsertData.sql</li>
+        <li>DepartmentSchedule.sql</li>
+        <li>EmployeeSchedule.sql</li>
+        <li>StaffingLevels.sql</li>
+        <li>ConflictReport.sql</li>
+        <li>Supporting screenshots or exported query results</li>
+    </ul>
+
+    <hr>
+
+    <h2>Evaluation Criteria</h2>
+
+    <ul>
+        <li>Database design and relationships</li>
+        <li>Correct use of primary and foreign keys</li>
+        <li>Data quality and realism</li>
+        <li>Successful implementation of business rules</li>
+        <li>Correct SQL syntax</li>
+        <li>Proper use of joins</li>
+        <li>Correct use of GROUP BY and aggregate functions</li>
+        <li>Accuracy and readability of query output</li>
+        <li>Completeness of documentation and submission materials</li>
+    </ul>
+</section>

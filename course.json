@@ -126,6 +126,7 @@
         "title": "Module 9 - Practical SQL for Healthcare",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/09/overview.html"},
+          "ex-scheduling": { "title": "Exercise: Hospital Staffing Schedule", "type": "content", "source": "/content/09/ex-scheduling.html" },
           "end": { "title": "End of Module 9: Practical SQL for Healthcare", "type": "content", "source": "/content/end-module.html" }
         }
       },

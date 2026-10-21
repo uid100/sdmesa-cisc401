@@ -14,9 +14,9 @@
             </p>
 
             <p>
-                This project simulates a realistic database development process
-                and is divided into three phases. Consistent progress is
-                expected throughout the project.
+                This project simulates a realistic database development
+                process. The work is divided into three phases and requires
+                consistent progress throughout the project period.
             </p>
         </div>
     </div>
@@ -92,6 +92,190 @@
         </div>
     </div>
 
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h4 mb-0">Business Rules</h2>
+        </div>
+
+        <div class="card-body">
+            <ol>
+                <li>Every employee must belong to a department.</li>
+                <li>
+                    Every schedule assignment must reference an existing
+                    employee.
+                </li>
+                <li>
+                    Every schedule assignment must reference an existing
+                    department.
+                </li>
+                <li>
+                    Every schedule assignment must reference an existing shift.
+                </li>
+                <li>
+                    Each department must have multiple employees assigned
+                    throughout the week.
+                </li>
+                <li>
+                    Create at least three intentional scheduling conflicts for
+                    testing purposes.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h4 mb-0">Required Query Reports</h2>
+        </div>
+
+        <div class="card-body">
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 1: Department Schedule Report
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Display all employees scheduled within a selected
+                        department.
+                    </p>
+
+                    <p><strong>Required Output</strong></p>
+
+                    <ul>
+                        <li>Employee Name</li>
+                        <li>Job Title</li>
+                        <li>Department Name</li>
+                        <li>Shift Name</li>
+                        <li>Shift Date</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
+
+                    <ul>
+                        <li>Use at least one INNER JOIN.</li>
+                        <li>Sort by date and employee name.</li>
+                        <li>Use meaningful column aliases.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 2: Employee Weekly Schedule
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Display the complete weekly schedule for a selected
+                        employee.
+                    </p>
+
+                    <ul>
+                        <li>Use at least one INNER JOIN.</li>
+                        <li>Filter for a specific employee.</li>
+                        <li>Sort by date.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 3: Staffing Levels Report
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Display the number of employees assigned to each
+                        department and shift.
+                    </p>
+
+                    <ul>
+                        <li>Use one or more INNER JOIN operations.</li>
+                        <li>Use COUNT().</li>
+                        <li>Use GROUP BY.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3 border-warning">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 4: Scheduling Conflict Report
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Identify employees with overlapping or conflicting
+                        assignments.
+                    </p>
+
+                    <ul>
+                        <li>Create at least three intentional conflicts.</li>
+                        <li>Use a self-join.</li>
+                        <li>Return at least three conflict records.</li>
+                    </ul>
+
+                    <div class="alert alert-warning mb-0">
+                        This is expected to be the most challenging query in
+                        the project.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 5: Department Staffing Summary
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Display the total number of employees assigned to each
+                        department.
+                    </p>
+
+                    <ul>
+                        <li>Use INNER JOIN operations.</li>
+                        <li>Use COUNT().</li>
+                        <li>Use GROUP BY.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">
+                        Query 6: Employee Workload Report
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <p>
+                        Display the number of scheduled shifts worked by each
+                        employee during the week.
+                    </p>
+
+                    <ul>
+                        <li>Use INNER JOIN operations.</li>
+                        <li>Use COUNT().</li>
+                        <li>Use GROUP BY.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="card mb-4 border-primary">
         <div class="card-header bg-primary text-white">
             <h2 class="h4 mb-0">Project Milestones and Deliverables</h2>
@@ -102,10 +286,10 @@
 
             <ul>
                 <li>Create the database and all required tables.</li>
-                <li>Submit an executable SQL script.</li>
+                <li>Submit a single executable SQL script.</li>
                 <li>
-                    Test the script on localhost\SQLEXPRESS or equivalent
-                    before submission.
+                    Test the script using localhost\SQLEXPRESS or an
+                    equivalent SQL Server environment.
                 </li>
             </ul>
 
@@ -125,18 +309,25 @@
             <ul>
                 <li>Populate all tables with realistic data.</li>
                 <li>Meet all minimum data requirements.</li>
-                <li>Revise Week 1 script if needed.</li>
+                <li>You may revise your Week 1 script if needed.</li>
             </ul>
 
             <p>
-                <strong>Submit:</strong>
-                CreateDatabase.sql and InsertData.sql
+                <strong>Submit:</strong> CreateDatabase.sql and
+                InsertData.sql
+            </p>
+
+            <p>
+                <em>
+                    No points assigned. Missing work receives a score of zero
+                    for progress monitoring purposes.
+                </em>
             </p>
 
             <hr>
 
             <h3 class="h5">
-                Week 3 Deliverable: Final Submission (100 points)
+                Week 3 Deliverable: Final Submission (100 Points)
             </h3>
 
             <ul>
@@ -150,7 +341,7 @@
                 <li>EmployeeWorkloadReport.sql - 10 points</li>
             </ul>
 
-            <p><strong>Total: 100 points</strong></p>
+            <p><strong>Total Possible Points: 100</strong></p>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 <div class="container my-4">
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="project-card">
         <div class="card-header">
             <h1 class="h3 mb-0">Hospital Staff Scheduling Database Project</h1>
         </div>
@@ -18,10 +18,10 @@
                 process. The work is divided into three phases and requires
                 consistent progress throughout the project period.
             </p>
-        </div>
-    </div>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="learning-objectives-card">
         <div class="card-header">
             <h2 class="h4 mb-0">Learning Objectives</h2>
         </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="database-requirements-card">
         <div class="card-header">
             <h2 class="h4 mb-0">Database Requirements</h2>
         </div>
@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="minimum-data-requirements-card">
         <div class="card-header">
             <h2 class="h4 mb-0">Minimum Data Requirements</h2>
         </div>
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="business-rules-card">
         <div class="card-header">
             <h2 class="h4 mb-0">Business Rules</h2>
         </div>
@@ -123,14 +123,14 @@
         </div>
     </div>
 
-    <div class="card mb-4">
+    <div class="card mb-4" id="required-query-reports-card">
         <div class="card-header">
             <h2 class="h4 mb-0">Required Query Reports</h2>
         </div>
 
         <div class="card-body">
 
-            <div class="card mb-3">
+            <div class="card mb-3" id="query1-dept-schedule">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 1: Department Schedule Report
@@ -138,15 +138,18 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Display all employees scheduled within a selected
-                        department.
+                        Hospital department managers need to view all employees
+                        scheduled to work within a specific department during the week.
+                        This report should provide a detailed listing of assigned staff.
                     </p>
 
-                    <p><strong>Required Output</strong></p>
+                    <p><strong>Required Output Fields</strong></p>
 
                     <ul>
-                        <li>Employee Name</li>
+                        <li>Employee ID</li>
+                        <li>Employee Full Name</li>
                         <li>Job Title</li>
                         <li>Department Name</li>
                         <li>Shift Name</li>
@@ -157,13 +160,14 @@
 
                     <ul>
                         <li>Use at least one INNER JOIN.</li>
-                        <li>Sort by date and employee name.</li>
+                        <li>Filter results for a selected department.</li>
                         <li>Use meaningful column aliases.</li>
+                        <li>Sort by Shift Date, then Employee Name.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card mb-3">
+            <div class="card mb-3" id="query2-employee-weekly-schedule">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 2: Employee Weekly Schedule
@@ -171,20 +175,37 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Display the complete weekly schedule for a selected
-                        employee.
+                        Employees frequently need a copy of their work schedule.
+                        Create a report that displays all scheduled assignments
+                        for a selected employee during the week.
                     </p>
+
+                    <p><strong>Required Output Fields</strong></p>
+
+                    <ul>
+                        <li>Employee ID</li>
+                        <li>Employee Full Name</li>
+                        <li>Shift Date</li>
+                        <li>Department Name</li>
+                        <li>Shift Name</li>
+                        <li>Shift Start Time</li>
+                        <li>Shift End Time</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
 
                     <ul>
                         <li>Use at least one INNER JOIN.</li>
                         <li>Filter for a specific employee.</li>
-                        <li>Sort by date.</li>
+                        <li>Sort chronologically by date and shift.</li>
+                        <li>Use meaningful column aliases.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card mb-3">
+            <div class="card mb-3" id="query3-staffing-levels">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 3: Staffing Levels Report
@@ -192,20 +213,35 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Display the number of employees assigned to each
-                        department and shift.
+                        Hospital administrators need to know how many employees are
+                        assigned to each department and shift in order to evaluate
+                        staffing coverage.
                     </p>
+
+                    <p><strong>Required Output Fields</strong></p>
+
+                    <ul>
+                        <li>Department Name</li>
+                        <li>Shift Name</li>
+                        <li>Number of Employees Scheduled</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
 
                     <ul>
                         <li>Use one or more INNER JOIN operations.</li>
                         <li>Use COUNT().</li>
                         <li>Use GROUP BY.</li>
+                        <li>Use meaningful aliases.</li>
+                        <li>Sort by Department Name and Shift Name.</li>
                     </ul>
+
                 </div>
             </div>
 
-            <div class="card mb-3 border-warning">
+            <div class="card mb-3 border-warning" id="query4-scheduling-conflicts">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 4: Scheduling Conflict Report
@@ -213,25 +249,60 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Identify employees with overlapping or conflicting
-                        assignments.
+                        Hospital managers must identify employees who have been
+                        accidentally assigned to conflicting work assignments.
+                        This report should detect potential scheduling errors.
                     </p>
 
+                    <p>
+                        Before executing this query, intentionally create at least
+                        three scheduling conflicts in your sample data.
+                    </p>
+
+                    <p><strong>Examples of Conflicts</strong></p>
+
                     <ul>
-                        <li>Create at least three intentional conflicts.</li>
+                        <li>
+                            An employee assigned to two departments during the same shift.
+                        </li>
+
+                        <li>
+                            An employee assigned to overlapping shifts on the same day.
+                        </li>
+                    </ul>
+
+                    <p><strong>Required Output Fields</strong></p>
+
+                    <ul>
+                        <li>Employee ID</li>
+                        <li>Employee Full Name</li>
+                        <li>Shift Date</li>
+                        <li>Department 1</li>
+                        <li>Department 2</li>
+                        <li>Shift 1</li>
+                        <li>Shift 2</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
+
+                    <ul>
                         <li>Use a self-join.</li>
+                        <li>Compare schedule records for the same employee.</li>
                         <li>Return at least three conflict records.</li>
+                        <li>Use meaningful aliases.</li>
                     </ul>
 
                     <div class="alert alert-warning mb-0">
-                        This is expected to be the most challenging query in
-                        the project.
+                        This is expected to be the most challenging query in the project.
                     </div>
+
                 </div>
             </div>
 
-            <div class="card mb-3">
+
+            <div class="card mb-3" id="query5-department-staffing-summary">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 5: Department Staffing Summary
@@ -239,20 +310,35 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Display the total number of employees assigned to each
-                        department.
+                        Senior management would like a summary showing how many
+                        employees are assigned to each department. This report
+                        provides a high-level staffing overview.
                     </p>
 
+                    <p><strong>Required Output Fields</strong></p>
+
                     <ul>
-                        <li>Use INNER JOIN operations.</li>
+                        <li>Department ID</li>
+                        <li>Department Name</li>
+                        <li>Total Employees</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
+
+                    <ul>
+                        <li>Use one or more INNER JOIN operations.</li>
                         <li>Use COUNT().</li>
                         <li>Use GROUP BY.</li>
+                        <li>Sort from highest to lowest employee count.</li>
+                        <li>Use meaningful aliases.</li>
                     </ul>
+
                 </div>
             </div>
 
-            <div class="card mb-3">
+            <div class="card mb-3" id="query6-employee-workload-report">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
                         Query 6: Employee Workload Report
@@ -260,23 +346,40 @@
                 </div>
 
                 <div class="card-body">
+
                     <p>
-                        Display the number of scheduled shifts worked by each
-                        employee during the week.
+                        Managers are concerned that some employees may be scheduled
+                        significantly more or less often than others. Create a report
+                        that summarizes employee workload across the week.
                     </p>
 
+                    <p><strong>Required Output Fields</strong></p>
+
                     <ul>
-                        <li>Use INNER JOIN operations.</li>
+                        <li>Employee ID</li>
+                        <li>Employee Full Name</li>
+                        <li>Job Title</li>
+                        <li>Department Name</li>
+                        <li>Total Scheduled Shifts</li>
+                    </ul>
+
+                    <p><strong>Technical Requirements</strong></p>
+
+                    <ul>
+                        <li>Use one or more INNER JOIN operations.</li>
                         <li>Use COUNT().</li>
                         <li>Use GROUP BY.</li>
+                        <li>Sort from highest to lowest workload.</li>
+                        <li>Use meaningful aliases.</li>
                     </ul>
+
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="card mb-4 border-primary">
+    <div class="card mb-4 border-primary" id="project-milestones-card">
         <div class="card-header bg-primary text-white">
             <h2 class="h4 mb-0">Project Milestones and Deliverables</h2>
         </div>
@@ -345,7 +448,7 @@
         </div>
     </div>
 
-    <div class="card mb-4 border-success">
+    <div class="card mb-4 border-success" id="submission-checklist-card">
         <div class="card-header bg-success text-white">
             <h2 class="h4 mb-0">Submission Checklist</h2>
         </div>

@@ -82,10 +82,16 @@
 
             <p>
                 The purpose of these requirements is to create enough data for
-                meaningful reporting and query testing. With a minimum of 40
+                meaningful reporting and query testing.
+            </p>
+            <p>
+                With a minimum of 40
                 employees and 21 possible shifts during a seven-day week
-                (3 shifts per day × 7 days), a small dataset may not adequately
-                represent hospital operations. Requiring at least 200 schedule
+                (3 shifts per day × 7 days), a smaller dataset may not adequately
+                represent hospital operations.
+            </p>
+            <p>
+                Requiring at least 200 schedule
                 assignments helps ensure realistic staffing levels and
                 meaningful query results.
             </p>
@@ -99,6 +105,10 @@
 
         <div class="card-body">
             <ol>
+                <li>
+                    Use realistic names for employees, departments, and job titles. Avoid
+                    using generic names such as "Employee 1" or "Department A."
+                </li>
                 <li>Every employee must belong to a department.</li>
                 <li>
                     Every schedule assignment must reference an existing
@@ -129,18 +139,20 @@
         </div>
 
         <div class="card-body">
-            <div class="boxed-paragraph mb-4">
-                <p>
-                    The following queries are required to support the hospital's scheduling needs.
-                    Each query should be designed to provide specific insights into the scheduling data.
-                </p>
-                <p>
-                    Across the six required reports, your project must demonstrate the use of at least 
-                    four INNER JOIN queries, two aggregate queries using COUNT() and GROUP BY, and one 
-                    self-join query. <em>hint: Consider using a self-join to compare an employee's schedule
-                    assignments to detect conflicts.</em>
-                    </em>
-                </p>
+            <div>
+                <ul>
+                    <li>
+                        The following reports (queries) are required to support the hospital's scheduling needs.
+                        Each query should be designed to provide specific insights into the scheduling data.
+                    </li>
+                    <li>
+                        Across the six required reports, your project must demonstrate the use of at least 
+                        four INNER JOIN queries, two aggregate queries using COUNT() and GROUP BY, and one 
+                        self-join query. <em>hint: Consider using a self-join to compare an employee's schedule
+                        assignments to detect conflicts.</em>
+                        </em>
+                    </li>
+                </ul>
             </div>
             <div class="card mb-3" id="query1-dept-schedule">
                 <div class="card-header">
@@ -283,6 +295,9 @@
                         <li>
                             An employee assigned to overlapping shifts on the same day.
                         </li>
+                        <li>
+                            Employee 100 assigned to both Emergency and Radiology during the same shift and date.
+                        </li>
                     </ul>
 
                     <p><strong>Required Output Fields</strong></p>
@@ -313,7 +328,6 @@
                 </div>
             </div>
 
-
             <div class="card mb-3" id="query5-department-staffing-summary">
                 <div class="card-header">
                     <h3 class="h5 mb-0">
@@ -327,6 +341,10 @@
                         Senior management would like a summary showing how many
                         employees are assigned to each department. This report
                         provides a high-level staffing overview.
+                    </p>
+                    <p>
+                        Show the number of employees assigned to each department 
+                        according to the Employee table.
                     </p>
 
                     <p><strong>Required Output Fields</strong></p>
@@ -363,6 +381,10 @@
                         Managers are concerned that some employees may be scheduled
                         significantly more or less often than others. Create a report
                         that summarizes employee workload across the week.
+                    </p>
+                    <p>
+                        Count the number of schedule assignments worked by each employee 
+                        during the seven-day period.
                     </p>
 
                     <p><strong>Required Output Fields</strong></p>
@@ -457,6 +479,9 @@
             </ul>
 
             <p><strong>Total Possible Points: 100</strong></p>
+            <p>
+                Database will be rebuilt from scratch using only the final submitted SQL files.
+            </p>
         </div>
     </div>
 
@@ -493,25 +518,14 @@
             </p>
 
 <pre><code>--
--- Name: Jane Smith
--- Date: 2026-11-15
+-- Name: [student name]
+-- Date: [yyyy-mm-dd]
 -- File: CreateDatabase.sql
--- Course: HIMS 101
+-- Course: CISC 401
 -- Assignment: Hospital Staff Scheduling Database Project
 -- Description: Creates the database and all required tables.
 --
 </code></pre>
-
-            <h3 class="h5">Recommended Header Fields</h3>
-
-            <ul>
-                <li>Student name</li>
-                <li>Date submitted (YYYY-MM-DD)</li>
-                <li>File name</li>
-                <li>Course identifier</li>
-                <li>Assignment name</li>
-                <li>Brief description of the file's purpose</li>
-            </ul>
 
             <p>
                 The description should explain what the script does in one or two
@@ -523,6 +537,10 @@
             <ul>
                 <li>
                     Verify that all required files are included.
+                </li>
+
+                <li>
+                    Verify that all required files have complete and correct header comments.
                 </li>
 
                 <li>
@@ -549,8 +567,14 @@
             </ul>
 
             <p class="fst-italic mb-0">
-                Always test each script before submission. Do not assume a script
-                works simply because it was not recently modified. Run every file
+                Always test each script before submission.
+            </p>
+            <p class="fst-italic mb-0">
+                Do not assume a script
+                works simply because it was not recently modified.
+            </p>
+            <p class="fst-italic mb-0">
+                Run every file
                 and verify that the expected results are produced.
             </p>
 

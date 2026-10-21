@@ -1,202 +1,157 @@
 <div class="container my-4">
 
-<div class="card mb-4">
-  <div class="card-header"><h1 class="h3 mb-0">Hospital Staff Scheduling Database Project</h1></div>
-  <div class="card-body">
-    <p>You have been hired as a database analyst for a regional hospital. Your task is to design, create, populate, and query a relational database that supports hospital staff scheduling across multiple departments operating 24 hours per day.</p>
-    <p>This project is intended to simulate a realistic database development process. The project is divided into three phases, and each phase requires a deliverable. Waiting until the final week will make successful completion difficult.</p>
-  </div>
-</div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h1 class="h3 mb-0">Hospital Staff Scheduling Database Project</h1>
+        </div>
 
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Learning Objectives</h2></div>
-  <div class="card-body">
-    <ul>
-      <li>Design a normalized relational database.</li>
-      <li>Create tables using SQL.</li>
-      <li>Define primary key and foreign key relationships.</li>
-      <li>Populate a database with realistic sample data.</li>
-      <li>Write multi-table queries using JOIN operations.</li>
-      <li>Use filtering, sorting, aggregates, and grouping.</li>
-      <li>Create meaningful management reports from database data.</li>
-    </ul>
-  </div>
-</div>
+        <div class="card-body">
+            <p>
+                You have been hired as a database analyst for a regional
+                hospital. Your task is to design, create, populate, and query
+                a relational database that supports hospital staff scheduling
+                across multiple departments operating 24 hours per day.
+            </p>
 
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Database Requirements</h2></div>
-  <div class="card-body">
-    <h3 class="h5">Required Tables</h3>
-    <ol>
-      <li>Department</li>
-      <li>Employee</li>
-      <li>Shift</li>
-      <li>Schedule</li>
-    </ol>
+            <p>
+                This project simulates a realistic database development process
+                and is divided into three phases. Consistent progress is
+                expected throughout the project.
+            </p>
+        </div>
+    </div>
 
-    <h3 class="h5">Suggested Columns</h3>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h4 mb-0">Learning Objectives</h2>
+        </div>
 
-    <p><strong>Department</strong></p>
-    <ul>
-      <li>department_id (Primary Key)</li>
-      <li>department_name</li>
-    </ul>
+        <div class="card-body">
+            <ul>
+                <li>Design a normalized relational database.</li>
+                <li>Create tables using SQL.</li>
+                <li>Define primary and foreign key relationships.</li>
+                <li>Populate a database with realistic sample data.</li>
+                <li>Write multi-table queries using INNER JOIN operations.</li>
+                <li>
+                    Use filtering, sorting, aggregates, grouping, and
+                    self-joins.
+                </li>
+                <li>Create meaningful management reports.</li>
+            </ul>
+        </div>
+    </div>
 
-    <p><strong>Employee</strong></p>
-    <ul>
-      <li>employee_id (Primary Key)</li>
-      <li>first_name</li>
-      <li>last_name</li>
-      <li>job_title</li>
-      <li>department_id (Foreign Key)</li>
-    </ul>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h4 mb-0">Database Requirements</h2>
+        </div>
 
-    <p><strong>Shift</strong></p>
-    <ul>
-      <li>shift_id (Primary Key)</li>
-      <li>shift_name</li>
-      <li>start_time</li>
-      <li>end_time</li>
-    </ul>
+        <div class="card-body">
+            <h3 class="h5">Required Tables</h3>
 
-    <p><strong>Schedule</strong></p>
-    <ul>
-      <li>schedule_id (Primary Key)</li>
-      <li>employee_id (Foreign Key)</li>
-      <li>department_id (Foreign Key)</li>
-      <li>shift_id (Foreign Key)</li>
-      <li>shift_date</li>
-    </ul>
-  </div>
-</div>
+            <ol>
+                <li>Department</li>
+                <li>Employee</li>
+                <li>Shift</li>
+                <li>Schedule</li>
+            </ol>
 
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Minimum Data Requirements</h2></div>
-  <div class="card-body">
-    <ul>
-      <li>7 departments</li>
-      <li>40 employees minimum</li>
-      <li>At least 10 physicians</li>
-      <li>At least 20 nurses</li>
-      <li>At least 10 additional staff members (technicians, therapists, clerks, coders, etc.)</li>
-      <li>3 shifts per day</li>
-      <li>7 consecutive days of scheduling data</li>
-      <li>At least 120 schedule assignments</li>
-    </ul>
+            <p>
+                Additional tables may be added if they support your design.
+            </p>
+        </div>
+    </div>
 
-    <p>The purpose of these requirements is to create enough data for meaningful reporting and query testing.</p>
-  </div>
-</div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="h4 mb-0">Minimum Data Requirements</h2>
+        </div>
 
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Business Rules</h2></div>
-  <div class="card-body">
-    <ol>
-      <li>Every employee must belong to a department.</li>
-      <li>Every schedule assignment must reference an existing employee.</li>
-      <li>Every schedule assignment must reference an existing department.</li>
-      <li>Every schedule assignment must reference an existing shift.</li>
-      <li>Each department must have multiple employees assigned throughout the week.</li>
-      <li>Create at least three intentional scheduling conflicts for testing purposes.</li>
-    </ol>
-  </div>
-</div>
+        <div class="card-body">
+            <ul>
+                <li>7 departments</li>
+                <li>40 employees minimum</li>
+                <li>At least 10 physicians</li>
+                <li>At least 20 nurses</li>
+                <li>At least 10 additional staff members</li>
+                <li>3 shifts per day</li>
+                <li>7 consecutive days of scheduling data</li>
+                <li>At least 200 schedule assignments</li>
+            </ul>
 
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Required Query Reports</h2></div>
-  <div class="card-body">
+            <p>
+                The purpose of these requirements is to create enough data for
+                meaningful reporting and query testing. With a minimum of 40
+                employees and 21 possible shifts during a seven-day week
+                (3 shifts per day × 7 days), a small dataset may not adequately
+                represent hospital operations. Requiring at least 200 schedule
+                assignments helps ensure realistic staffing levels and
+                meaningful query results.
+            </p>
+        </div>
+    </div>
 
-    <h3 class="h5">Query 1: Department Schedule Report</h3>
-    <p>Display all employees scheduled within a department.</p>
-    <ul>
-      <li>Employee Name</li>
-      <li>Job Title</li>
-      <li>Department Name</li>
-      <li>Shift Name</li>
-      <li>Shift Date</li>
-    </ul>
+    <div class="card mb-4 border-primary">
+        <div class="card-header bg-primary text-white">
+            <h2 class="h4 mb-0">Project Milestones and Deliverables</h2>
+        </div>
 
-    <h3 class="h5">Query 2: Employee Weekly Schedule</h3>
-    <p>Display the complete weekly schedule for a selected employee.</p>
+        <div class="card-body">
+            <h3 class="h5">Week 1 Deliverable: Database Structure</h3>
 
-    <h3 class="h5">Query 3: Staffing Levels Report</h3>
-    <p>Display the number of employees assigned to each department and shift using COUNT() and GROUP BY.</p>
+            <ul>
+                <li>Create the database and all required tables.</li>
+                <li>Submit an executable SQL script.</li>
+                <li>
+                    Test the script on localhost\SQLEXPRESS or equivalent
+                    before submission.
+                </li>
+            </ul>
 
-    <h3 class="h5">Query 4: Scheduling Conflict Report</h3>
-    <p>Identify employees who have overlapping or conflicting assignments.</p>
+            <p><strong>Submit:</strong> CreateDatabase.sql</p>
 
-    <h3 class="h5">Query 5: Department Staffing Summary</h3>
-    <p>Display the total number of employees assigned to each department.</p>
+            <p>
+                <em>
+                    No points assigned. Missing work receives a score of zero
+                    for progress monitoring purposes.
+                </em>
+            </p>
 
-    <h3 class="h5">Query 6: Employee Workload Report</h3>
-    <p>Display the number of scheduled shifts worked by each employee during the week.</p>
-  </div>
-</div>
+            <hr>
 
-<div class="card mb-4 border-primary">
-  <div class="card-header bg-primary text-white"><h2 class="h4 mb-0">Project Milestones and Deliverables</h2></div>
-  <div class="card-body">
+            <h3 class="h5">Week 2 Deliverable: Seed Data</h3>
 
-    <h3 class="h5">Week 1 Deliverable: Database Structure</h3>
-    <ul>
-      <li>Create the database and all required tables.</li>
-      <li>Define primary keys and foreign keys.</li>
-      <li>Submit a single SQL script that creates the database and all tables.</li>
-      <li>The script must execute successfully without manual editing.</li>
-      <li>Test your script using localhost\SQLEXPRESS or an equivalent SQL Server environment before submission.</li>
-    </ul>
+            <ul>
+                <li>Populate all tables with realistic data.</li>
+                <li>Meet all minimum data requirements.</li>
+                <li>Revise Week 1 script if needed.</li>
+            </ul>
 
-    <p><strong>Submit:</strong> CreateDatabase.sql</p>
+            <p>
+                <strong>Submit:</strong>
+                CreateDatabase.sql and InsertData.sql
+            </p>
 
-    <hr>
+            <hr>
 
-    <h3 class="h5">Week 2 Deliverable: Seed Data</h3>
-    <ul>
-      <li>Populate all tables with realistic hospital data.</li>
-      <li>Meet all minimum data requirements.</li>
-      <li>Verify that foreign key relationships are satisfied.</li>
-      <li>You may revise your Week 1 script if design improvements become necessary.</li>
-    </ul>
+            <h3 class="h5">
+                Week 3 Deliverable: Final Submission (100 points)
+            </h3>
 
-    <p><strong>Submit:</strong></p>
-    <ul>
-      <li>CreateDatabase.sql (updated version)</li>
-      <li>InsertData.sql</li>
-    </ul>
+            <ul>
+                <li>CreateDatabase.sql (Final Version) - 10 points</li>
+                <li>InsertData.sql (Final Version) - 15 points</li>
+                <li>DepartmentSchedule.sql - 10 points</li>
+                <li>EmployeeWeeklySchedule.sql - 10 points</li>
+                <li>StaffingLevels.sql - 15 points</li>
+                <li>SchedulingConflicts.sql - 20 points</li>
+                <li>DepartmentStaffingSummary.sql - 10 points</li>
+                <li>EmployeeWorkloadReport.sql - 10 points</li>
+            </ul>
 
-    <hr>
-
-    <h3 class="h5">Week 3 Deliverable: Final Submission</h3>
-    <p>Submit the final version of your project including all scripts required to rebuild and test the database.</p>
-
-    <p><strong>Submit all eight SQL files:</strong></p>
-    <ol>
-      <li>CreateDatabase.sql</li>
-      <li>InsertData.sql</li>
-      <li>DepartmentSchedule.sql</li>
-      <li>EmployeeWeeklySchedule.sql</li>
-      <li>StaffingLevels.sql</li>
-      <li>SchedulingConflicts.sql</li>
-      <li>DepartmentStaffingSummary.sql</li>
-      <li>EmployeeWorkloadReport.sql</li>
-    </ol>
-
-    <p>Each query file must execute independently and produce the requested report.</p>
-  </div>
-</div>
-
-<div class="card mb-4">
-  <div class="card-header"><h2 class="h4 mb-0">Submission Expectations</h2></div>
-  <div class="card-body">
-    <ul>
-      <li>SQL should be properly formatted and readable.</li>
-      <li>Meaningful aliases should be used in query output.</li>
-      <li>Scripts should include comments where appropriate.</li>
-      <li>All scripts should execute without errors.</li>
-      <li>Your database should contain realistic and believable hospital data.</li>
-      <li>All work must be your own.</li>
-    </ul>
-  </div>
-</div>
+            <p><strong>Total: 100 points</strong></p>
+        </div>
+    </div>
 
 </div>

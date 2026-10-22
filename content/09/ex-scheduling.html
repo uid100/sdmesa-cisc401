@@ -60,6 +60,47 @@
             <p>
                 Additional tables may be added if they support your design.
             </p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h5 mb-0">Suggested Table Columns</h3>
+                </div>
+                <div class="card-body">
+                    <h3>Department</h3>
+                    <ul>
+                        <li>department_id (Primary Key)</li>
+                        <li>department_name</li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h3>Employee</h3>
+                    <ul>
+                        <li>employee_id (Primary Key)</li>
+                        <li>first_name</li>
+                        <li>last_name</li>
+                        <li>job_title</li>
+                        <li>department_id (Foreign Key)</li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h3>Shift</h3>
+                    <ul>
+                        <li>shift_id (Primary Key)</li>
+                        <li>shift_name</li>
+                        <li>start_time</li>
+                        <li>end_time</li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h3>Schedule</h3>
+                    <ul>
+                        <li>schedule_id (Primary Key)</li>
+                        <li>employee_id (Foreign Key)</li>
+                        <li>shift_id (Foreign Key)</li>
+                        <li>schedule_date</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 

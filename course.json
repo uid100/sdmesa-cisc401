@@ -141,6 +141,9 @@
         "title": "Module 11 - Data Analytics and Visualization",
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "/content/11/overview.html"},
+          "nosql": { "title": "NoSQL Databases", "type": "content", "source": "/content/11/nosql.html" },
+          "sqlvnosql": { "title": "SQL vs NoSQL", "type": "content", "source": "/content/11/sqlvnosql.html" },
+          "nosqldemo": { "title": "Demo: NoSQL Database", "type": "content", "source": "/content/11/nosqldemo.html" },
           "end": { "title": "End of Module 11: Data Analytics and Visualization", "type": "content", "source": "/content/end-module.html" }
         }
       },

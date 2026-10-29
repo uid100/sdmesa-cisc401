@@ -125,19 +125,19 @@
       "09": {
         "title": "Module 9 - Practical SQL for Healthcare",
         "pages": {
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/09/overview.html"},
-          "ex-scheduling": { "title": "Exercise: Hospital Staffing Schedule", "type": "content", "source": "/content/09/ex-scheduling.html" },
-          "end": { "title": "End of Module 9: Practical SQL for Healthcare", "type": "content", "source": "/content/end-module.html" }
+          "overview": {  "title": "Module Overview", "type": "content", "source": "content/09/overview.html"},
+          "ex-scheduling": { "title": "Exercise: Hospital Staffing Schedule", "type": "content", "source": "content/09/ex-scheduling.html" },
+          "end": { "title": "End of Module 9: Practical SQL for Healthcare", "type": "content", "source": "content/end-module.html" }
         }
       },
       "10": {
         "title": "Module 10 - Working with NoSQL Databases",
         "pages": {
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/10/overview.html"},
-          "nosql": { "title": "NoSQL Databases", "type": "content", "source": "/content/11/nosql.html" },
-          "sqlvnosql": { "title": "SQL vs NoSQL", "type": "content", "source": "/content/11/sqlvnosql.html" },
-          "nosqldemo": { "title": "Demo: NoSQL Database", "type": "content", "source": "/content/11/nosqldemo.html" },
-          "end": { "title": "End of Module 10: Working with NoSQL Databases", "type": "content", "source": "/content/end-module.html" }
+          "overview": {  "title": "Module Overview", "type": "content", "source": "content/10/overview.html"},
+          "nosql": { "title": "NoSQL Databases", "type": "content", "source": "content/10/nosql.html" },
+          "sqlvnosql": { "title": "SQL vs NoSQL", "type": "content", "source": "content/10/sqlvnosql.html" },
+          "nosqldemo": { "title": "Demo: NoSQL Database", "type": "content", "source": "content/10/nosqldemo.html" },
+          "end": { "title": "End of Module 10: Working with NoSQL Databases", "type": "content", "source": "content/end-module.html" }
         }
       },
       "11": {

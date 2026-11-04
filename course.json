@@ -145,6 +145,8 @@
         "pages": {
           "overview": {  "title": "Module Overview", "type": "content", "source": "content/11/overview.html"},
           "globalview": { "title": "Global View of Health Data", "type": "content", "source": "content/11/hospitalinthecloud.html" },
+          "who": { "title": "World Health Organization (WHO)", "type": "content", "source": "content/11/who.html" },
+          "gho": { "title": "Global Health Observatory (GHO)", "type": "content", "source": "content/11/gho.html" },
           "end": { "title": "End of Module 11: Data Analytics and Visualization", "type": "content", "source": "content/end-module.html" }
         }
       },

@@ -1,224 +1,340 @@
-<div class="overview">
-    <div class="card">
-        <div class="card-header">
-            Global Health Observatory (GHO)
-        </div>
-        <div class="card-body">
+<!-- Introduction -->
 
-    <h1>Global Health Observatory API</h1>
-    <div id="intro">
-        <details open>
-            <summary>Introduction</summary>
-            <p>
-                The Global Health Observatory (GHO) is the World Health Organization's portal providing access to data
-                and
-                analyses for monitoring the global health situation.
-            </p>
-            <p>
-                The GHO data repository contains an extensive list of indicators, which can be selected by theme or
-                through
-                a multi-dimension query functionality.
-            </p>
-            <p>
-                It is the World Health Organization's main health statistics repository.
-            </p>
-            <p>
-                The GHO provides access to data from WHO's Member States. The data repository is updated on a regular
-                basis
-                to
-                provide users with the most recent data available.
-            </p>
-            <p>
-                The GHO data repository provides access to over 50 datasets on priority health topics including:
-            <ul>
-                <li>mortality and burden of diseases</li>
-                <li>the Millennium Development Goals:
-                    <ul>
-                        <li>nutrition</li>
-                        <li>child health</li>
-                        <li>maternal and reproductive health</li>
-                        <li>immunization</li>
-                        <li>HIV/AIDS</li>
-                        <li>tuberculosis</li>
-                        <li>malaria</li>
-                        <li>neglected diseases</li>
-                        <li>water and sanitation</li>
-                    </ul>
-                </li>
-                <li>non communicable diseases and risk factors</li>
-                <li>epidemic-prone diseases</li>
-                <li>health systems</li>
-                <li>environmental health</li>
-                <li>violence and injuries</li>
-                <li>equity</li>
-                <li><em>others</em></li>
-            </ul>
-            <p>
-                The GHO data repository is available through a number of flexible tools, including an API that allows
-                users
-                to
-                access the data in a variety of formats, including XML, JSON, and CSV.
-            </p>
-            <p>
-                API provides access to the data repository through a number of endpoints, including the following:
-            </p>
-            <ul>
-                <li>
-                    Start here: <br>
-                    <a href="https://www.who.int/data/gho/info/gho-odata-api"
-                        target="_blank">https://www.who.int/data/gho/info/gho-odata-api</a><br>
-                    <em>What are the "dimension" codes?
-                        <a href="https://ghoapi.azureedge.net/api/Dimension" target="_blank">(Example 1)</a></em><br>
-                    <em>What are "indicators"?
-                        <a href="https://ghoapi.azureedge.net/api/Indicator" target="_blank">(Example 3)</a></em><br>
-                    &nbsp;
-                </li>
-                <li>
-                    Get a list of available regions:<br>
-                    <a href="" https://ghoapi.azureedge.net/api/Dimension/REGION/DimensionValues"
-                        target="_blank">https://ghoapi.azureedge.net/api/Dimension/REGION/DimensionValues</a><br>
-                    &nbsp;
-                </li>
+<div class="card mb-4">
+    <div class="card-header">
+        <h2 class="h4 mb-0">Global Health Data Exploration</h2>
+    </div>
+    <div class="card-body">
+        <p>
+            Health organizations around the world collect, analyze, and share
+            data to monitor public health, identify trends, and guide healthcare
+            policy decisions.
+        </p>
 
+        <p>
+            In this activity, you will explore publicly available health data
+            from organizations such as the World Health Organization (WHO),
+            World Bank, United Nations, and Our World in Data. You will select
+            a topic of interest, analyze the data, and share your findings with
+            the class.
+        </p>
+    </div>
+</div>
 
-            </ul>
-            <div style="display: none;">
-                <ul>
-                    <li>
-                        <a
-                            href="https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,%20%27Nurs%27)">https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,%20%27Nurs%27)</a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://ghoapi.azureedge.net/api/DIMENSION/VEHICLESTANDARD/DimensionValues">https://ghoapi.azureedge.net/api/DIMENSION/VEHICLESTANDARD/DimensionValues</a>
-                    </li>
-                    <li>
-                        <code>
-                    https://ghoapi.azureedge.net/api/HWF_0010?$filter=SpatialDim eq 'USA' and date(TimeDimensionBegin) ge
-                    2018-01-01 and date(TimeDimensionBegin) lt 2022-01-01
-                </code>
-                    </li>
-                    <li>
-                        <code>
-                    https://ghoapi.azureedge.net/api/HRH_01?$filter=SpatialDim eq 'USA' and date(TimeDimensionBegin) ge
-                    2014-01-01
-                </code>
-                    </li>
-                    <li>
-                        <code>
-                    https://ghoapi.azureedge.net/api/HWF_0010?$filter=SpatialDim%20eq%20%27USA%27%20and%20date(TimeDimensionBegin)%20ge%202000-01-01%20and%20date(TimeDimensionBegin)%20lt%202012-01-01
-                </code>
-                    </li>
-                </ul>
+<!-- Learning Objectives -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Learning Objectives</h3>
+    </div>
+    <div class="card-body">
+        <p>After completing this activity, you should be able to:</p>
+
+        <ul>
+            <li>Locate and access public health datasets.</li>
+            <li>Interpret health-related statistics and trends.</li>
+            <li>Compare data across countries, regions, or time periods.</li>
+            <li>Identify factors that may influence health outcomes.</li>
+            <li>Communicate findings using data and supporting evidence.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Data Sources -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Suggested Data Sources</h3>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">World Health Organization (WHO)</h4>
+                        <p>
+                            Explore global public health indicators and trends.
+                        </p>
+                        <ul>
+                            <li>Life expectancy</li>
+                            <li>Maternal health</li>
+                            <li>Child mortality</li>
+                            <li>Immunization</li>
+                            <li>Tuberculosis</li>
+                            <li>Malaria</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p>
-                The GHO API provides access to a wide range of data, including data on health workforce, health systems,
-                and
-                health financing. The API allows users to filter the data by country, date, and other dimensions, and to
-                retrieve the data in a variety of formats, including XML, JSON, and CSV. The API is designed to be
-                flexible
-                and
-                easy to use, and provides access to a wealth of data on global health.
-            </p>
-        </details>
-    </div> <!-- #intro -->
-    <hr>
-    <div id="exercise">
-        <details open>
-            <summary>Discussion</summary>
-            <ol>
-                <li>Initial Post (30 points)
-                    <p>
-                        Explore the GHO API and find a dataset that interests you. Use the API to retrieve the data and
-                        analyze it to gain insights into the global health situation. Share your findings with the
-                        class.
-                    </p>
-                    <p>
-                        Include the URI you used to retrieve the data, including the indicator code and query filters,
-                        and any key insights you gained from the data.
-                    </p>
-                    <p>
-                        What are the key insights you gained from the data? How do they relate to the global health
-                        situation?
-                    </p>
-                </li>
-                <li>Response Posts (10 points each)
-                    <p>
-                        Respond to at least two of your classmates' posts with thoughtful feedback and suggestions.
-                        Share your own thoughts on the data they presented.
-                    </p>
-                </li>
-            </ol>
 
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">World Bank Data</h4>
+                        <p>
+                            Economic, demographic, and healthcare statistics.
+                        </p>
+                        <ul>
+                            <li>Healthcare spending</li>
+                            <li>Population growth</li>
+                            <li>Access to healthcare</li>
+                            <li>Clean water access</li>
+                            <li>Life expectancy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Sample Queries</h2>
-            <p>
-                Here are three sample queries for exploring WHO data using the GHO API, along with analysis questions
-                for each.
-            </p>
-            <p>
-                You can use these as starting points to get ideas. Change them for your own results.
-            </p>
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">United Nations Data</h4>
+                        <p>
+                            Population and development indicators from around
+                            the world.
+                        </p>
+                        <ul>
+                            <li>Demographics</li>
+                            <li>Birth rates</li>
+                            <li>Mortality statistics</li>
+                            <li>Human development indicators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <div id="example1">
-                <details>
-                    <summary>example 1</summary>
-                    <h3>Life Expectancy Analysis</h3>
-                    <p>
-                        Query: Retrieve "Life expectancy at birth" (e.g., WHOSIS_000001).
-                    </p>
-                    <p>
-                        Analysis: What are the trends in life expectancy across different regions over the last decade?
-                        Are there significant differences by gender?
-                    </p>
-                    <p>
-                        <a href="https://ghoapi.azureedge.net/api/WHOSIS_000001?filter=data(TimeDimensionBegin)%20ge%202013-01-01"
-                            target="_blank">
-                            https://ghoapi.azureedge.net/api/WHOSIS_000001?filter=data(TimeDimensionBegin) ge 2013-01-01
-                        </a>
-                    </p>
-                </details>
-            </div> <!-- #example1 -->
+            <div class="col-md-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">Our World in Data</h4>
+                        <p>
+                            Interactive charts and visualizations covering a
+                            wide range of health topics.
+                        </p>
+                        <ul>
+                            <li>COVID-19</li>
+                            <li>Vaccination rates</li>
+                            <li>Air pollution</li>
+                            <li>Obesity</li>
+                            <li>Smoking prevalence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div id="example2">
-                <details>
-                    <summary>example 2</summary>
-                    <h3>Mortality Rates due to Air Pollution</h3>
-                    <p>
-                        Query: Filter for "Ambient air pollution attributable deaths" (indicator code available).
-                    </p>
-                    <p>
-                        Analysis: How have air pollution-related mortality rates changed, especially in urban areas?
-                    </p>
-                    <p>
-                        https://ghoapi.azureedge.net/api/indicator_code'<br>
-                        try:
-                        <code>https://ghoapi.azureedge.net/api/Indicator?$filter=contains(IndicatorName,%27AMBIENT%27)</code><br>
-                        Things to consider: How many different indicators are there? How are they different?
-                    </p>
-                </details>
-            </div> <!-- #example2 -->
+    </div>
+</div>
 
-            <div id="example3">
-                <details>
-                    <summary>example 3</summary>
-                    <h3>Maternal Mortality Ratios </h3>
-                    <p>
-                        Query: Retrieve data on maternal mortality ratios
-                    </p>
-                    <p>
-                        Analysis: How does maternal mortality correlate with access to healthcare services?
-                    </p>
-                    <p>
-                        <a href="https://ghoapi.azureedge.net/api/MORT_MATERNALNUM" target="_blank">
-                            https://ghoapi.azureedge.net/api/MORT_MATERNALNUM
-                        </a>
-                    </p>
-                </details>
-            </div> <!-- #example3 -->
-        </details>
-    </div> <!-- #exercise -->
+<!-- Assignment -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Assignment</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            Select a global health topic that interests you and investigate
+            publicly available data related to that topic.
+        </p>
+
+        <p><strong>Possible topics include:</strong></p>
+
+        <ul>
+            <li>Life expectancy</li>
+            <li>Vaccination rates</li>
+            <li>Maternal health</li>
+            <li>Child health</li>
+            <li>Obesity</li>
+            <li>Air pollution</li>
+            <li>Tuberculosis</li>
+            <li>Malaria</li>
+            <li>Access to clean water</li>
+            <li>Healthcare spending</li>
+        </ul>
+
+        <p>
+            Your goal is not simply to report numbers, but to identify patterns,
+            trends, comparisons, or relationships that help explain the global
+            health situation.
+        </p>
+
+    </div>
+</div>
+
+<!-- Initial Post -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Initial Discussion Post (30 Points)</h3>
+    </div>
+    <div class="card-body">
+
+        <p>Your post should include the following:</p>
+
+        <ol>
+            <li>
+                <strong>Health Topic</strong><br>
+                Identify the topic you selected.
+            </li>
+
+            <li>
+                <strong>Data Source</strong><br>
+                Identify the website, report, or dataset used.
+            </li>
+
+            <li>
+                <strong>Key Findings</strong><br>
+                Describe two or three important observations from the data.
+            </li>
+
+            <li>
+                <strong>Analysis</strong><br>
+                Explain what the findings may indicate and discuss possible
+                contributing factors.
+            </li>
+
+            <li>
+                <strong>Supporting Evidence</strong><br>
+                Include statistics, charts, tables, screenshots, or links
+                supporting your conclusions.
+            </li>
+        </ol>
+
+    </div>
+</div>
+
+<!-- Example Topics -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Example Investigations</h3>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-lg-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">Life Expectancy</h4>
+                        <ul>
+                            <li>Which countries have the highest life expectancy?</li>
+                            <li>How has life expectancy changed over time?</li>
+                            <li>What factors may explain differences?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">Vaccination Rates</h4>
+                        <ul>
+                            <li>Which regions report high coverage?</li>
+                            <li>Which report lower coverage?</li>
+                            <li>How might vaccination rates affect disease outbreaks?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">Air Pollution</h4>
+                        <ul>
+                            <li>Which countries experience higher pollution?</li>
+                            <li>How does pollution relate to health outcomes?</li>
+                            <li>What environmental factors contribute?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6">Healthcare Spending</h4>
+                        <ul>
+                            <li>Which countries spend the most on healthcare?</li>
+                            <li>Do spending levels align with health outcomes?</li>
+                            <li>What other factors affect results?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+    </div>
+</div>
+
+<!-- Response Posts -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Response Posts (10 Points Each)</h3>
+    </div>
+    <div class="card-body">
+
+        <p>
+            Respond thoughtfully to at least two classmates.
+        </p>
+
+        <p><strong>Your responses may:</strong></p>
+
+        <ul>
+            <li>Ask follow-up questions.</li>
+            <li>Compare another country or region.</li>
+            <li>Suggest additional data sources.</li>
+            <li>Offer alternative interpretations.</li>
+            <li>Connect the findings to another health issue.</li>
+        </ul>
+
+        <p>
+            Avoid responses that simply state agreement without adding new ideas
+            or analysis.
+        </p>
+
+    </div>
+</div>
+
+<!-- Discussion Questions -->
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Discussion Questions</h3>
+    </div>
+    <div class="card-body">
+
+        <ol>
+            <li>What health indicators seem most useful for understanding public health?</li>
+            <li>What challenges may affect the accuracy of global health data?</li>
+            <li>How might data collection methods differ among countries?</li>
+            <li>Why are data standards important when sharing health information?</li>
+            <li>How can healthcare organizations use data to improve outcomes?</li>
+        </ol>
+
+    </div>
+</div>
+
+<!-- Key Takeaway -->
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="h5 mb-0">Key Takeaway</h3>
+    </div>
+    <div class="card-body">
+        <p>
+            Health Information Management professionals rely on accurate data to
+            support healthcare operations, public health initiatives, research,
+            and policy development. By exploring real-world global health data,
+            you gain experience locating information, interpreting trends, and
+            communicating evidence-based conclusions.
+        </p>
     </div>
 </div>
